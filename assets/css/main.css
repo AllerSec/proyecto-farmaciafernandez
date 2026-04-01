@@ -1346,3 +1346,25 @@ body::before {
   .map-overlay { display: none; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+/* ── Hero móvil ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-bg img {
+    object-position: 65% center;
+  }
+  .hero-bg::after {
+    background:
+      linear-gradient(to bottom,
+        rgba(10,20,14,.85) 0%,
+        rgba(10,20,14,.55) 18%,
+        rgba(10,20,14,.20) 38%,
+        transparent 52%
+      ),
+      linear-gradient(to top,
+        rgba(10,20,14,.98) 0%,
+        rgba(10,20,14,.88) 30%,
+        rgba(10,20,14,.55) 60%,
+        transparent 80%
+      );
+  }
+}
