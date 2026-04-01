@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Página no encontrada | Farmacia Fernández Díez</title>
+  <meta name="description" content="La página que buscas no existe o ha sido movida. Vuelve a la web de Farmacia Fernández Díez en Bera.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--green-deep);
+      color: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      font-family: var(--font-body, 'Inter', sans-serif);
+    }
+
+    .error-wrap {
+      position: relative;
+      z-index: 1;
+      padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+      max-width: 680px;
+      width: 100%;
+    }
+
+    .error-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      margin-bottom: 2rem;
+      opacity: 0;
+    }
+
+    .error-num {
+      font-family: var(--font-display, 'Cormorant Garamond', serif);
+      font-size: clamp(7rem, 22vw, 16rem);
+      font-weight: 700;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--gold, #D4A843);
+      letter-spacing: -.02em;
+      opacity: 0;
+      margin-bottom: 1rem;
+    }
+
+    .error-title {
+      font-family: var(--font-display, 'Cormorant Garamond', serif);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 600;
+      color: var(--cream, #FAF7F0);
+      opacity: 0;
+      margin-bottom: 1rem;
+    }
+
+    .error-desc {
+      font-size: clamp(.9rem, 2vw, 1.05rem);
+      color: rgba(250, 247, 240, .6);
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      opacity: 0;
+    }
+
+    .error-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--gold, #D4A843);
+      color: var(--green-deep, #1A2E1A);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .9rem 2.2rem;
+      border-radius: 4px;
+      opacity: 0;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .error-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212,168,67,.35);
+    }
+
+    .error-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold, #D4A843);
+      margin: 0 auto 2rem;
+      opacity: 0;
+    }
+
+    /* Decorative floating particles */
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(212,168,67,.08);
+      animation: float linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(110vh) scale(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating particles background -->
+<div class="particles" aria-hidden="true">
+  <div class="particle" style="width:6px;height:6px;left:15%;animation-duration:12s;animation-delay:0s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:30%;animation-duration:18s;animation-delay:3s;"></div>
+  <div class="particle" style="width:8px;height:8px;left:50%;animation-duration:14s;animation-delay:1s;"></div>
+  <div class="particle" style="width:5px;height:5px;left:70%;animation-duration:16s;animation-delay:5s;"></div>
+  <div class="particle" style="width:3px;height:3px;left:85%;animation-duration:20s;animation-delay:2s;"></div>
+  <div class="particle" style="width:7px;height:7px;left:40%;animation-duration:11s;animation-delay:7s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:60%;animation-duration:15s;animation-delay:4s;"></div>
+</div>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<main class="error-wrap" role="main">
+  <img
+    src="./assets/images/logo.png"
+    alt="Farmacia Fernández Díez"
+    class="error-logo"
+    width="72" height="72"
+    id="error-logo"
+  >
+
+  <p class="error-num" id="error-num" aria-label="Error 404">404</p>
+
+  <div class="error-divider" id="error-divider"></div>
+
+  <h1 class="error-title" id="error-title">Página no encontrada</h1>
+
+  <p class="error-desc" id="error-desc">
+    Esta página no existe o ha sido movida.<br>
+    Vuelve al inicio de Farmacia Fernández Díez.
+  </p>
+
+  <a href="./es/index.html" class="error-btn" id="error-btn">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    Volver al inicio
+  </a>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  // Register nothing needed for core, just animate
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+  tl
+    .to('#error-logo', {
+      autoAlpha: 1,
+      y: 0,
+      duration: .9,
+      ease: 'back.out(1.8)',
+      fromVars: { y: -40, autoAlpha: 0 }
+    })
+    .fromTo('#error-logo', { y: -40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: 'back.out(1.8)' }, 0)
+    .fromTo('#error-num',  { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .8 }, 0.3)
+    .fromTo('#error-divider', { autoAlpha: 0, scaleX: 0 }, { autoAlpha: 1, scaleX: 1, duration: .6, transformOrigin: 'center' }, 0.7)
+    .fromTo('#error-title', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: .6 }, 0.85)
+    .fromTo('#error-desc',  { autoAlpha: 0, y: 15 }, { autoAlpha: 1, y: 0, duration: .6 }, 1.0)
+    .fromTo('#error-btn',   { autoAlpha: 0, y: 10, scale: .95 }, { autoAlpha: 1, y: 0, scale: 1, duration: .5, ease: 'back.out(1.4)' }, 1.2);
+
+  // Subtle idle pulse on logo
+  gsap.to('#error-logo', {
+    y: -6,
+    duration: 2.2,
+    ease: 'sine.inOut',
+    yoyo: true,
+    repeat: -1,
+    delay: 2
+  });
+
+  // Custom cursor
+  const cursor = document.querySelector('.cursor');
+  const ring = document.querySelector('.cursor-ring');
+  if (cursor && ring) {
+    document.addEventListener('mousemove', e => {
+      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
+      gsap.to(ring,   { x: e.clientX, y: e.clientY, duration: .15 });
+    });
+  }
+</script>
+</body>
+</html>
