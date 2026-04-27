@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- End Google Tag Manager -->
+
   <title>Farmacia Fernández Díez — Bera, Nafarroa | Zure farmazia</title>
   <meta name="description" content="Farmacia Fernández Díez Beran (Nafarroa). Arreta farmazeutiko pertsonalizatua, parafarmazia, ortopedia eta dermofarmazia. Titularra: Arantza Fernández Díez. Tel. 948 63 06 31.">
   <meta name="keywords" content="farmazia Bera, farmazia Nafarroa, Arantza Fernández Díez, parafarmazia, ortopedia, dermofarmazia, sendagaiak">
@@ -12,6 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://farmaciafernandez.es/es/">
   <link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/">
   <link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/">
+  <link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/">
   <link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/">
 
   <meta property="og:type" content="website">
@@ -37,6 +46,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <meta name="theme-color" content="#1B4332">
   <link rel="stylesheet" href="../assets/css/main.css">
 
   <script type="application/ld+json">
@@ -103,13 +115,19 @@
   </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBVPJV6G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">Eduki nagusira saltatu</a>
 
 <div id="page-transition" style="position:fixed;inset:0;background:var(--green-deep);z-index:9996;pointer-events:none;opacity:0;"></div>
 
 <div class="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" aria-hidden="true"></div>
 
-<div id="page-loader" role="status" aria-label="Kargatzen...">
+<div id="page-loader" role="status" aria-label="Kargatzen…">
   <img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80">
   <div class="loader-bar"></div>
 </div>
@@ -119,7 +137,7 @@
     <a href="./index.html" class="nav-logo" aria-label="Farmacia Fernández Díez — hasiera">
       <img src="../assets/images/logo.png" alt="Farmacia Fernández Díez logoa" width="44" height="44" loading="eager">
       <div class="nav-logo-text">
-        <span class="nav-logo-name">Farmacia Fernández</span>
+        <span class="nav-logo-name" translate="no">Farmacia Fernández</span>
         <span class="nav-logo-sub">Bera · Nafarroa</span>
       </div>
     </a>
@@ -132,15 +150,17 @@
     </ul>
 
     <div class="nav-right">
-      <div class="lang-switcher" role="navigation" aria-label="Hizkuntza hautatzailea">
+      <div class="lang-switcher" role="group" aria-label="Hizkuntza hautatzailea">
         <a href="../es/index.html" class="lang-btn" lang="es">ES</a>
         <span class="lang-sep" aria-hidden="true"></span>
         <a href="../eu/index.html" class="lang-btn active" lang="eu" aria-current="true">EU</a>
         <span class="lang-sep" aria-hidden="true"></span>
         <a href="../en/index.html" class="lang-btn" lang="en">EN</a>
+        <span class="lang-sep" aria-hidden="true"></span>
+        <a href="../fr/" class="lang-btn" lang="fr">FR</a>
       </div>
       <button class="nav-toggle" aria-label="Menu ireki" aria-expanded="false" aria-controls="nav-mobile">
-        <span></span><span></span><span></span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </nav>
@@ -154,11 +174,12 @@
       <a href="../es/index.html" class="nav-mobile-lang" lang="es">ES</a>
       <a href="../eu/index.html" class="nav-mobile-lang active" lang="eu">EU</a>
       <a href="../en/index.html" class="nav-mobile-lang" lang="en">EN</a>
+      <a href="../fr/" class="nav-mobile-lang" lang="fr">FR</a>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <!-- Hero -->
   <section class="hero" aria-label="Ongi etorri Farmacia Fernández Díez-era">
     <div class="hero-bg">
@@ -313,8 +334,8 @@
         <p class="stat-label">Zure eskura</p>
       </div>
       <div class="reveal">
-        <span class="stat-num" data-count="948">948</span>
-        <p class="stat-label" style="font-size:.7rem;">63 06 31 — Deitu</p>
+        <a href="tel:+34948630631" translate="no" class="stat-phone">948 63 06 31</a>
+        <p class="stat-label">Deitu</p>
       </div>
       <div class="reveal">
         <span class="stat-num" data-count="100" data-suffix="%">100%</span>
@@ -369,6 +390,7 @@
           <button class="carousel-dot" role="tab" aria-label="5. irudia" aria-selected="false"></button>
           <button class="carousel-dot" role="tab" aria-label="6. irudia" aria-selected="false"></button>
         </div>
+        <span class="carousel-count" aria-live="polite">1 / 6</span>
         <button class="carousel-btn next" aria-label="Hurrengo irudia" data-hover>
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
         </button>
@@ -424,7 +446,7 @@
             </div>
             <div class="contact-info-text">
               <span>Telefonoa</span>
-              <a href="tel:+34948630631" aria-label="Farmaziari deitu">948 63 06 31</a>
+              <a href="tel:+34948630631" translate="no" aria-label="Farmaziari deitu">948 63 06 31</a>
             </div>
           </div>
 
@@ -434,7 +456,7 @@
             </div>
             <div class="contact-info-text">
               <span>Posta elektronikoa</span>
-              <a href="mailto:farmaciafernandez@hotmail.es">farmaciafernandez@hotmail.es</a>
+              <a href="mailto:farmaciafernandez@hotmail.es" translate="no">farmaciafernandez@hotmail.es</a>
             </div>
           </div>
 
@@ -477,6 +499,7 @@
     <div class="footer-brand">
       <img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy">
       <p>Farmazia komunitarioa Beran, Nafarroa. Arreta pertsonalizatua familia osorentzat.</p>
+      <p class="footer-owner">Arantza Fernández Díez<br>Farmazeutiko Titularra</p>
       <div class="footer-social" aria-label="Sare sozialak">
         <a href="https://www.instagram.com/farmacia_fdez/" target="_blank" rel="noopener noreferrer" aria-label="Farmacia Fernández Díez Instagram" data-tooltip="Instagram" data-hover>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"/></svg>
@@ -503,7 +526,9 @@
         </li>
         <li class="footer-contact-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <span>948 63 06 31</span>
+          <div class="footer-phones">
+            <a href="tel:+34948630631" translate="no">948 63 06 31</a>
+          </div>
         </li>
         <li class="footer-contact-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -516,13 +541,9 @@
   <div class="footer-bottom">
     <p class="footer-copy">
       &copy; <span id="footer-year"></span> Farmacia Fernández Díez.
-      Web diseinua: <a href="#" rel="noopener">Unax Aller</a>.
+      Web diseinua: <a href="https://www.linkedin.com/in/unax-aller-fernandez/" rel="noopener" target="_blank">Unax Aller</a>.
     </p>
-    <nav class="footer-legal" aria-label="Legala">
-      <a href="#">Lege-oharra</a>
-      <a href="#">Pribatutasuna</a>
-      <a href="#">Cookieak</a>
-    </nav>
+    <nav class="footer-legal" aria-label="Legala"><a href="./lege-oharra.html">Lege-oharra</a><a href="./pribatutasuna.html">Pribatutasuna</a><a href="./cookieak.html">Cookieak</a></nav>
   </div>
 </footer>
 

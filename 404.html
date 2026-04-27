@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- End Google Tag Manager -->
   <title>404 — Página no encontrada | Farmacia Fernández Díez</title>
   <meta name="description" content="La página que buscas no existe o ha sido movida. Vuelve a la web de Farmacia Fernández Díez en Bera.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="./assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <meta name="theme-color" content="#1B4332">
   <link rel="stylesheet" href="./assets/css/main.css">
   <style>
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -121,9 +132,18 @@
       90% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1); opacity: 0; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .particle { animation: none; opacity: 0; }
+      .error-logo, .error-num, .error-divider, .error-title, .error-desc, .error-btn { opacity: 1 !important; }
+    }
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBVPJV6G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Floating particles background -->
 <div class="particles" aria-hidden="true">
@@ -165,44 +185,71 @@
   </a>
 </main>
 
+<script>
+  // Language-aware home link
+  (function () {
+    const map = {
+      es: './es/index.html',
+      eu: './eu/index.html',
+      en: './en/index.html',
+      fr: './fr/index.html'
+    };
+    const titles = {
+      es: { title: 'Página no encontrada', desc: 'Esta página no existe o ha sido movida.<br>Vuelve al inicio de Farmacia Fernández Díez.', btn: 'Volver al inicio' },
+      eu: { title: 'Orria ez da aurkitu', desc: 'Orri hau ez da existitzen edo lekuz aldatu da.<br>Itzuli Farmacia Fernández Díez-en hasierara.', btn: 'Hasierara itzuli' },
+      en: { title: 'Page not found', desc: 'This page does not exist or has been moved.<br>Return to the Farmacia Fernández Díez home page.', btn: 'Back to home' },
+      fr: { title: 'Page non trouvée', desc: 'Cette page n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.<br>Revenez \u00e0 l\u2019accueil de la Pharmacie Fern\u00e1ndez D\u00edez.', btn: 'Retour \u00e0 l\u2019accueil' }
+    };
+    const path = location.pathname.toLowerCase();
+    let lang = null;
+    const m = path.match(/\/(es|eu|en|fr)(\/|$)/);
+    if (m) lang = m[1];
+    if (!lang) {
+      const nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+      lang = map[nav] ? nav : 'es';
+    }
+    const btn = document.getElementById('error-btn');
+    const title = document.getElementById('error-title');
+    const desc = document.getElementById('error-desc');
+    if (btn) btn.setAttribute('href', map[lang]);
+    if (title) title.textContent = titles[lang].title;
+    if (desc) desc.innerHTML = titles[lang].desc;
+    if (btn) {
+      const svg = btn.querySelector('svg');
+      btn.innerHTML = '';
+      if (svg) btn.appendChild(svg);
+      btn.appendChild(document.createTextNode(' ' + titles[lang].btn));
+    }
+    document.documentElement.setAttribute('lang', lang);
+  })();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-  // Register nothing needed for core, just animate
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-  tl
-    .to('#error-logo', {
-      autoAlpha: 1,
-      y: 0,
-      duration: .9,
-      ease: 'back.out(1.8)',
-      fromVars: { y: -40, autoAlpha: 0 }
-    })
-    .fromTo('#error-logo', { y: -40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: 'back.out(1.8)' }, 0)
-    .fromTo('#error-num',  { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .8 }, 0.3)
-    .fromTo('#error-divider', { autoAlpha: 0, scaleX: 0 }, { autoAlpha: 1, scaleX: 1, duration: .6, transformOrigin: 'center' }, 0.7)
-    .fromTo('#error-title', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: .6 }, 0.85)
-    .fromTo('#error-desc',  { autoAlpha: 0, y: 15 }, { autoAlpha: 1, y: 0, duration: .6 }, 1.0)
-    .fromTo('#error-btn',   { autoAlpha: 0, y: 10, scale: .95 }, { autoAlpha: 1, y: 0, scale: 1, duration: .5, ease: 'back.out(1.4)' }, 1.2);
+  if (!reduceMotion) {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl
+      .fromTo('#error-logo',   { y: -40, autoAlpha: 0 }, { y: 0,  autoAlpha: 1, duration: .9, ease: 'back.out(1.8)' }, 0)
+      .fromTo('#error-num',    { autoAlpha: 0, y: 30 },  { autoAlpha: 1, y: 0, duration: .8 }, 0.3)
+      .fromTo('#error-divider',{ autoAlpha: 0, scaleX: 0 }, { autoAlpha: 1, scaleX: 1, duration: .6, transformOrigin: 'center' }, 0.7)
+      .fromTo('#error-title',  { autoAlpha: 0, y: 20 },  { autoAlpha: 1, y: 0, duration: .6 }, 0.85)
+      .fromTo('#error-desc',   { autoAlpha: 0, y: 15 },  { autoAlpha: 1, y: 0, duration: .6 }, 1.0)
+      .fromTo('#error-btn',    { autoAlpha: 0, y: 10, scale: .95 }, { autoAlpha: 1, y: 0, scale: 1, duration: .5, ease: 'back.out(1.4)' }, 1.2);
 
-  // Subtle idle pulse on logo
-  gsap.to('#error-logo', {
-    y: -6,
-    duration: 2.2,
-    ease: 'sine.inOut',
-    yoyo: true,
-    repeat: -1,
-    delay: 2
-  });
+    gsap.to('#error-logo', { y: -6, duration: 2.2, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 2 });
+  }
 
-  // Custom cursor
-  const cursor = document.querySelector('.cursor');
-  const ring = document.querySelector('.cursor-ring');
-  if (cursor && ring) {
-    document.addEventListener('mousemove', e => {
-      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
-      gsap.to(ring,   { x: e.clientX, y: e.clientY, duration: .15 });
-    });
+  if (!reduceMotion && !coarsePointer) {
+    const cursor = document.querySelector('.cursor');
+    const ring = document.querySelector('.cursor-ring');
+    if (cursor && ring) {
+      document.addEventListener('mousemove', e => {
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0, overwrite: 'auto' });
+        gsap.to(ring,   { x: e.clientX, y: e.clientY, duration: .15, overwrite: 'auto' });
+      });
+    }
   }
 </script>
 </body>
