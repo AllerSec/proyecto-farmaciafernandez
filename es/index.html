@@ -14,9 +14,7 @@
 
   <!-- ── SEO Primary ─────────────────────────────────── -->
   <title>Farmacia Fernández Díez — Bera, Navarra | Farmacia de confianza</title>
-  <meta name="description" content="Farmacia Fernández Díez en Bera (Navarra). Atención farmacéutica personalizada, parafarmacia, ortopedia y dermofarmacia. Titular: Arantza Fernández Díez. Tel. 948 63 06 31.">
-  <meta name="keywords" content="farmacia Bera, farmacia Vera de Bidasoa, farmacia Navarra, Arantza Fernández Díez, parafarmacia, ortopedia, dermofarmacia, medicamentos, farmacia Fernández">
-  <link rel="canonical" href="https://farmaciafernandez.es/es/">
+  <meta name="description" content="Farmacia Fernández Díez en Bera (Navarra). Atención farmacéutica personalizada, parafarmacia, ortopedia y dermofarmacia. Titular: Arantza Fernández Díez. Tel. 948 63 06 31.">  <link rel="canonical" href="https://farmaciafernandez.es/es/">
 
   <!-- ── Hreflang ──────────────────────────────────────── -->
   <link rel="alternate" hreflang="es" href="https://farmaciafernandez.es/es/">
@@ -54,8 +52,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" as="image" href="../assets/images/exterior.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
-  <meta name="theme-color" content="#1B4332">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF7F0">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1B4332">
   <link rel="stylesheet" href="../assets/css/main.css">
 
   <!-- ── Schema.org LocalBusiness ─────────────────────── -->
@@ -138,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Page Loader -->
 <div id="page-loader" role="status" aria-label="Cargando…">
-  <img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80">
+  <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
   <div class="loader-bar"></div>
 </div>
 
@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <nav class="site-nav" role="navigation" aria-label="Navegación principal">
     <a href="./index.html" class="nav-logo" aria-label="Farmacia Fernández Díez — inicio">
-      <img src="../assets/images/logo.png" alt="Logo Farmacia Fernández Díez" width="44" height="44" loading="eager">
+      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Logo Farmacia Fernández Díez" width="44" height="44" loading="eager"></picture>
       <div class="nav-logo-text">
         <span class="nav-logo-name" translate="no">Farmacia Fernández</span>
         <span class="nav-logo-sub">Bera · Navarra</span>
@@ -162,11 +162,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="nav-right">
       <div class="lang-switcher" role="group" aria-label="Selector de idioma">
-        <a href="../es/index.html" class="lang-btn active" lang="es" aria-current="true">ES</a>
+        <a href="../es/" class="lang-btn active" lang="es" aria-current="page">ES</a>
         <span class="lang-sep" aria-hidden="true"></span>
-        <a href="../eu/index.html" class="lang-btn" lang="eu">EU</a>
+        <a href="../eu/" class="lang-btn" lang="eu">EU</a>
         <span class="lang-sep" aria-hidden="true"></span>
-        <a href="../en/index.html" class="lang-btn" lang="en">EN</a>
+        <a href="../en/" class="lang-btn" lang="en">EN</a>
         <span class="lang-sep" aria-hidden="true"></span>
         <a href="../fr/" class="lang-btn" lang="fr">FR</a>
       </div>
@@ -183,9 +183,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="./nosotros.html" class="nav-mobile-link">Nosotros</a>
     <a href="./contacto.html" class="nav-mobile-link">Contacto</a>
     <div class="nav-mobile-langs">
-      <a href="../es/index.html" class="nav-mobile-lang active" lang="es">ES</a>
-      <a href="../eu/index.html" class="nav-mobile-lang" lang="eu">EU</a>
-      <a href="../en/index.html" class="nav-mobile-lang" lang="en">EN</a>
+      <a href="../es/" class="nav-mobile-lang active" lang="es">ES</a>
+      <a href="../eu/" class="nav-mobile-lang" lang="eu">EU</a>
+      <a href="../en/" class="nav-mobile-lang" lang="en">EN</a>
       <a href="../fr/" class="nav-mobile-lang" lang="fr">FR</a>
     </div>
   </nav>
@@ -195,13 +195,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ── Hero ────────────────────────────────────────── -->
   <section class="hero" aria-label="Bienvenida a Farmacia Fernández Díez">
     <div class="hero-bg">
-      <img
+      <picture><source srcset="../assets/images/exterior.webp" type="image/webp"><img
         src="../assets/images/exterior.jpg"
         alt="Exterior de la Farmacia Fernández Díez en la Plaza de los Fueros de Bera, Navarra"
         width="1920" height="1080"
         loading="eager"
         fetchpriority="high"
-      >
+      ></picture>
     </div>
 
     <div class="hero-content">
@@ -308,20 +308,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section about-section" aria-labelledby="nosotros-title">
     <div class="about-grid">
       <div class="about-visual">
-        <img
+        <picture><source srcset="../assets/images/interior-1.webp" type="image/webp"><img
           src="../assets/images/interior-1.jpg"
           alt="Interior de la Farmacia Fernández Díez en Bera"
           class="about-img-main reveal-left"
           width="600" height="800"
           loading="lazy"
-        >
-        <img
+        ></picture>
+        <picture><source srcset="../assets/images/interior-2.webp" type="image/webp"><img
           src="../assets/images/interior-2.jpg"
           alt="Productos de parafarmacia en Farmacia Fernández Díez"
           class="about-img-accent reveal-scale"
           width="400" height="300"
           loading="lazy"
-        >
+        ></picture>
         <div class="about-badge reveal-left" aria-label="Farmacia comunitaria en Bera">
           <div class="about-badge-num">Bera</div>
           <div class="about-badge-text">Plaza de los Fueros, 4</div>
@@ -371,22 +371,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="carousel-wrap" role="region" aria-label="Galería de imágenes de la farmacia">
       <div class="carousel-track" tabindex="0" role="list" aria-label="Imágenes de la farmacia">
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/exterior.jpg"   alt="Fachada exterior de Farmacia Fernández Díez en Bera" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/exterior.webp" type="image/webp"><img src="../assets/images/exterior.jpg"   alt="Fachada exterior de Farmacia Fernández Díez en Bera" loading="lazy" width="560" height="420"></picture>
         </div>
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/interior-1.jpg" alt="Interior de la farmacia — zona de dispensación" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/interior-1.webp" type="image/webp"><img src="../assets/images/interior-1.jpg" alt="Interior de la farmacia — zona de dispensación" loading="lazy" width="560" height="420"></picture>
         </div>
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/interior-2.jpg" alt="Sección de parafarmacia y cosmética" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/interior-2.webp" type="image/webp"><img src="../assets/images/interior-2.jpg" alt="Sección de parafarmacia y cosmética" loading="lazy" width="560" height="420"></picture>
         </div>
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/interior-3.jpg" alt="Mostrador principal de la farmacia" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/interior-3.webp" type="image/webp"><img src="../assets/images/interior-3.jpg" alt="Mostrador principal de la farmacia" loading="lazy" width="560" height="420"></picture>
         </div>
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/interior-4.jpg" alt="Área de ortopedia y material sanitario" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/interior-4.webp" type="image/webp"><img src="../assets/images/interior-4.jpg" alt="Área de ortopedia y material sanitario" loading="lazy" width="560" height="420"></picture>
         </div>
         <div class="carousel-slide reveal-scale" role="listitem">
-          <img src="../assets/images/interior-5.jpg" alt="Productos naturales y complementos alimenticios" loading="lazy" width="560" height="420">
+          <picture><source srcset="../assets/images/interior-5.webp" type="image/webp"><img src="../assets/images/interior-5.jpg" alt="Productos naturales y complementos alimenticios" loading="lazy" width="560" height="420"></picture>
         </div>
       </div>
 
@@ -489,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ── Map ───────────────────────────────────────── -->
   <div class="map-section" aria-label="Mapa de ubicación de la farmacia">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.5!2d-1.6841!3d43.2823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51a1c1c1c1c1c1%3A0x1!2sPlaza+de+los+Fueros%2C+4%2C+31780+Bera%2C+Navarra!5e0!3m2!1ses!2ses!4v1"
+      src="https://maps.google.com/maps?q=Plaza+de+los+Fueros+4+Bera+Navarra&t=&z=16&ie=UTF8&iwloc=&output=embed"
       title="Ubicación de Farmacia Fernández Díez en Plaza de los Fueros, 4, Bera"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
@@ -510,7 +510,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy">
+      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
       <p>Oficina de farmacia comunitaria en Bera, Navarra. Atención personalizada para toda la familia.</p>
       <p class="footer-owner">Arantza Fernández Díez<br>Farmacéutica Titular</p>
       <div class="footer-social" aria-label="Redes sociales">

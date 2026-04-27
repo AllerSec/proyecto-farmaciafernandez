@@ -567,7 +567,7 @@ body::before {
 
 .btn-primary {
   background: var(--gold);
-  color: var(--white);
+  color: var(--green-deep);
   box-shadow: var(--shadow-gold);
 }
 .btn-primary:hover {
@@ -1018,7 +1018,7 @@ body::before {
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: rgba(250,247,240,.55);
+  color: rgba(250,247,240,.85);
   margin-top: .5rem;
 }
 
@@ -1461,7 +1461,7 @@ body::before {
 .footer-links { display: flex; flex-direction: column; gap: .6rem; }
 .footer-link {
   font-size: .88rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.78);
   transition: color var(--transition);
 }
 .footer-link:hover { color: var(--gold-light); }

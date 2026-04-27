@@ -507,6 +507,21 @@ function initPageTransitions() {
 
 /* ── Video Parallax (services pages) ─────────────────── */
 function initVideoParallax() {
+  // On mobile/save-data/slow-conn, remove decorative videos to save bandwidth
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const slowConn = conn && (conn.saveData || /(2g|slow-2g)/.test(conn.effectiveType || ''));
+  if (isMobile || slowConn) {
+    document.querySelectorAll('.page-hero-video-wrap video, .services-bio-banner .vbg video, .services-cta-video .vbg video').forEach(v => {
+      v.pause();
+      v.removeAttribute('src');
+      v.querySelectorAll('source').forEach(s => s.remove());
+      v.load();
+      v.remove();
+    });
+    return;
+  }
+
   // Page-hero video entrance
   const heroVid = document.querySelector('.page-hero-video-wrap video');
   if (heroVid) {
@@ -596,6 +611,12 @@ function initVideoParallax() {
 function initSectionHeaderVideos() {
   const section = document.querySelector('#servicios, #services, #zerbitzuak');
   if (!section) return;
+
+  // Skip on small screens, slow connections, or when user prefers reduced motion / saved data
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (conn && (conn.saveData || /(2g|slow-2g)/.test(conn.effectiveType || ''))) return;
 
   const depth = location.pathname.split('/').filter(Boolean).length;
   const prefix = depth >= 2 ? '../' : './';
