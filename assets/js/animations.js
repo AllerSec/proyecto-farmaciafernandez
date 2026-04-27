@@ -5,6 +5,10 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ── JS-ready flag ────────────────────────────────────────
+   Set inline in <head> too, but keep it here as safety. */
+document.documentElement.classList.add('js-ready');
+
 /* ── Reduced Motion ───────────────────────────────────── */
 const mm = gsap.matchMedia();
 
@@ -33,15 +37,19 @@ function initCursor() {
     gsap.set(ring, { x: ringX, y: ringY });
   });
 
-  document.querySelectorAll('a, button, [data-hover]').forEach(el => {
-    el.addEventListener('mouseenter', () => {
+  // Event delegation — single listener instead of N listeners
+  const isHoverable = el => el && (el.matches?.('a, button, [data-hover]') || el.closest?.('a, button, [data-hover]'));
+  document.addEventListener('mouseover', e => {
+    if (isHoverable(e.target)) {
       cursor.classList.add('hover');
       ring.classList.add('hover');
-    });
-    el.addEventListener('mouseleave', () => {
+    }
+  });
+  document.addEventListener('mouseout', e => {
+    if (isHoverable(e.target) && !isHoverable(e.relatedTarget)) {
       cursor.classList.remove('hover');
       ring.classList.remove('hover');
-    });
+    }
   });
 }
 
@@ -60,8 +68,8 @@ function initLoader() {
   // Activate loader now that JS/GSAP is confirmed working
   document.body.classList.add('js-loader-active');
 
-  // Safety net: always dismiss after 3.5s regardless of GSAP state
-  const safetyTimeout = setTimeout(dismissLoader, 3500);
+  // Safety net: always dismiss after 1.8s regardless of GSAP state
+  const safetyTimeout = setTimeout(dismissLoader, 1800);
 
   const tl = gsap.timeline({
     onComplete: () => {
@@ -468,8 +476,59 @@ function initFormMicro() {
       });
     });
 
-  // Note: submit handler intentionally not wired — form has no backend yet.
-  // When backend is connected, handle submit here with disabled button + spinner.
+  // Mailto submit: no backend, opens user's email client with pre-filled message.
+  // The form has required fields validated natively (browser handles the empty-field UX).
+  const form = document.querySelector('form[name="contacto"], form[name="contact"], form[name="kontaktua"]');
+  if (!form) return;
+
+  form.removeAttribute('novalidate');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const pick = (...keys) => {
+      for (const k of keys) {
+        const v = data.get(k);
+        if (v != null && String(v).trim()) return String(v).trim();
+      }
+      return '';
+    };
+    const nombre  = pick('nombre', 'name', 'nom', 'izena');
+    const email   = pick('email', 'posta');
+    const tel     = pick('telefono', 'phone', 'tel', 'telefonoa');
+    const asunto  = pick('asunto', 'subject', 'sujet', 'gaia');
+    const mensaje = pick('mensaje', 'message', 'mezua');
+
+    const lang = document.documentElement.lang || 'es';
+    const subjectMap = {
+      es: 'Consulta web',
+      eu: 'Webetik bidalitako kontsulta',
+      en: 'Website enquiry',
+      fr: 'Demande depuis le site web'
+    };
+    const labelMap = {
+      es: { name: 'Nombre', email: 'Email', tel: 'Teléfono', subject: 'Asunto', msg: 'Mensaje' },
+      eu: { name: 'Izena',  email: 'Posta', tel: 'Telefonoa', subject: 'Gaia', msg: 'Mezua' },
+      en: { name: 'Name',   email: 'Email', tel: 'Phone',     subject: 'Subject', msg: 'Message' },
+      fr: { name: 'Nom',    email: 'Email', tel: 'Téléphone', subject: 'Sujet',   msg: 'Message' }
+    };
+    const L = labelMap[lang] || labelMap.es;
+    const subject = `${subjectMap[lang] || subjectMap.es}${asunto ? ' — ' + asunto : ''}`;
+    const body = [
+      `${L.name}: ${nombre}`,
+      `${L.email}: ${email}`,
+      tel ? `${L.tel}: ${tel}` : null,
+      asunto ? `${L.subject}: ${asunto}` : null,
+      '',
+      `${L.msg}:`,
+      mensaje
+    ].filter(Boolean).join('\n');
+
+    const mailto = `mailto:farmaciafernandez@hotmail.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
 }
 
 /* ── Page transition (fade between pages) ─────────────── */
@@ -480,10 +539,18 @@ function initPageTransitions() {
   // Ensure overlay is invisible on load — no entrance animation needed
   gsap.set(overlay, { autoAlpha: 0 });
 
+  // Reset overlay if page is restored from bfcache (back/forward navigation)
+  window.addEventListener('pageshow', e => {
+    if (e.persisted) gsap.set(overlay, { autoAlpha: 0 });
+  });
+
   // Skip transitions entirely for users who prefer reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"])').forEach(link => {
+  document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"]):not(.lang-btn):not(.nav-mobile-lang):not(.skip-link):not(.footer-legal a)').forEach(link => {
+    // Skip language switchers and legal links — no fade needed
+    if (link.closest('.lang-switcher') || link.closest('.footer-legal') || link.closest('.nav-mobile-langs')) return;
+
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
       if (!href || href.startsWith('javascript')) return;
