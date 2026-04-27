@@ -1,0 +1,16 @@
+{
+  "name": "farmaciafernandez-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --startPath /es/ --files '**/*.html, assets/css/*.css, assets/js/*.js' --no-notify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}

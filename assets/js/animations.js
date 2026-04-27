@@ -68,8 +68,8 @@ function initLoader() {
   // Activate loader now that JS/GSAP is confirmed working
   document.body.classList.add('js-loader-active');
 
-  // Safety net: always dismiss after 1.8s regardless of GSAP state
-  const safetyTimeout = setTimeout(dismissLoader, 1800);
+  // Safety net: always dismiss after 800ms regardless of GSAP state
+  const safetyTimeout = setTimeout(dismissLoader, 800);
 
   const tl = gsap.timeline({
     onComplete: () => {
@@ -297,12 +297,16 @@ function initScrollReveals() {
     document.querySelectorAll('.stat-num').forEach(el => {
       const target = parseInt(el.dataset.count || el.textContent, 10);
       const suffix = el.dataset.suffix || '';
+      let lastUpdate = 0;
 
       gsap.fromTo({ val: 0 }, { val: target }, {
         val: target,
         duration: 1.8,
         ease: 'power2.out',
         onUpdate: function() {
+          const now = performance.now();
+          if (now - lastUpdate < 16) return;
+          lastUpdate = now;
           el.textContent = Math.round(this.targets()[0].val) + suffix;
         },
         scrollTrigger: {
@@ -413,7 +417,7 @@ function initCarousel() {
     const base = offsetFor(current);
     const clamped = Math.max(getMaxOff(), Math.min(0, base + dx));
     gsap.set(track, { x: clamped });
-  });
+  }, { passive: true });
 
   // ── Touch ────────────────────────────────────────────
   let touchStartX = 0, touchStartT = 0;
@@ -466,6 +470,7 @@ function initSectionDecos() {
 
 /* ── Form microinteractions ──────────────────────────── */
 function initFormMicro() {
+  // Focus lift animation
   document.querySelectorAll('.form-group input, .form-group textarea, .form-group select')
     .forEach(el => {
       el.addEventListener('focus', () => {
@@ -473,11 +478,60 @@ function initFormMicro() {
       });
       el.addEventListener('blur', () => {
         gsap.to(el.closest('.form-group'), { y: 0, duration: .2, ease: 'power2.out' });
+        validateField(el);
       });
     });
 
-  // Mailto submit: no backend, opens user's email client with pre-filled message.
-  // The form has required fields validated natively (browser handles the empty-field UX).
+  const lang = document.documentElement.lang || 'es';
+  const msgs = {
+    es: { required: 'Este campo es obligatorio', email: 'Introduce un email válido', tel: 'Introduce un teléfono válido', sent: '¡Mensaje preparado! Se abrirá tu cliente de correo.' },
+    en: { required: 'This field is required', email: 'Enter a valid email address', tel: 'Enter a valid phone number', sent: 'Message ready! Your email client will open.' },
+    eu: { required: 'Eremu hau nahitaezkoa da', email: 'Sartu baliozko helbide elektroniko bat', tel: 'Sartu baliozko telefono zenbaki bat', sent: 'Mezua prest! Zure posta bezero ireki da.' },
+    fr: { required: 'Ce champ est obligatoire', email: 'Entrez une adresse e-mail valide', tel: 'Entrez un numéro de téléphone valide', sent: 'Message prêt ! Votre client de messagerie va s\'ouvrir.' }
+  };
+  const M = msgs[lang] || msgs.es;
+
+  function showError(group, el, msg) {
+    let errEl = group.querySelector('.form-error');
+    if (!errEl) {
+      errEl = document.createElement('span');
+      errEl.className = 'form-error';
+      errEl.setAttribute('role', 'alert');
+      errEl.setAttribute('aria-live', 'polite');
+      group.appendChild(errEl);
+    }
+    errEl.textContent = msg;
+    errEl.classList.add('visible');
+    group.classList.add('has-error');
+    el.setAttribute('aria-invalid', 'true');
+  }
+
+  function clearError(group, el) {
+    const errEl = group.querySelector('.form-error');
+    if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+    group.classList.remove('has-error');
+    el.removeAttribute('aria-invalid');
+  }
+
+  function validateField(el) {
+    const group = el.closest('.form-group');
+    if (!group) return true;
+    if (el.required && !el.value.trim()) {
+      showError(group, el, M.required);
+      return false;
+    }
+    if (el.type === 'email' && el.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
+      showError(group, el, M.email);
+      return false;
+    }
+    if (el.type === 'tel' && el.value && !/^[\d\s\+\-\(\)]{7,}$/.test(el.value)) {
+      showError(group, el, M.tel);
+      return false;
+    }
+    clearError(group, el);
+    return true;
+  }
+
   const form = document.querySelector('form[name="contacto"], form[name="contact"], form[name="kontaktua"]');
   if (!form) return;
 
@@ -485,7 +539,15 @@ function initFormMicro() {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    if (!form.reportValidity()) return;
+
+    const fields = form.querySelectorAll('input, textarea, select');
+    let valid = true;
+    fields.forEach(f => { if (!validateField(f)) valid = false; });
+    if (!valid) {
+      const firstErr = form.querySelector('.has-error input, .has-error textarea, .has-error select');
+      firstErr?.focus();
+      return;
+    }
 
     const data = new FormData(form);
     const pick = (...keys) => {
@@ -501,7 +563,6 @@ function initFormMicro() {
     const asunto  = pick('asunto', 'subject', 'sujet', 'gaia');
     const mensaje = pick('mensaje', 'message', 'mezua');
 
-    const lang = document.documentElement.lang || 'es';
     const subjectMap = {
       es: 'Consulta web',
       eu: 'Webetik bidalitako kontsulta',
@@ -527,6 +588,18 @@ function initFormMicro() {
     ].filter(Boolean).join('\n');
 
     const mailto = `mailto:farmaciafernandez@hotmail.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Show success feedback
+    let fb = form.querySelector('.form-submit-feedback');
+    if (!fb) {
+      fb = document.createElement('div');
+      fb.className = 'form-submit-feedback success';
+      fb.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>${M.sent}</span>`;
+      form.appendChild(fb);
+    }
+    fb.classList.add('show');
+    setTimeout(() => fb.classList.remove('show'), 5000);
+
     window.location.href = mailto;
   });
 }
@@ -673,6 +746,27 @@ function initVideoParallax() {
   });
 }
 
+/* ── Footer utilities ─────────────────────────────────── */
+function initFooter() {
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Highlight today's row in hours table
+  const rows = document.querySelectorAll('.hours-table tr');
+  if (!rows.length) return;
+
+  const dayIndex = new Date().getDay(); // 0=Sunday
+
+  // 0=Sun,1=Mon,...,5=Fri,6=Sat — same across all locales
+  if (dayIndex === 6 && rows[1]) {
+    rows[1].classList.add('today'); // Saturday row
+  } else if (dayIndex !== 0 && rows[0]) {
+    rows[0].classList.add('today'); // Mon-Fri row
+  } else if (rows[2]) {
+    rows[2].classList.add('today'); // Sunday (closed)
+  }
+}
+
 /* ── Init All ─────────────────────────────────────────── */
 /* ── Section Header Video Background ────────────────────── */
 function initSectionHeaderVideos() {
@@ -717,7 +811,77 @@ function initSectionHeaderVideos() {
   });
 }
 
+/* ── Cookie Consent ───────────────────────────────────── */
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const accepted = localStorage.getItem('cookie-consent');
+  if (accepted) return;
+
+  setTimeout(() => banner.classList.add('visible'), 1200);
+
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.classList.remove('visible');
+  });
+
+  document.getElementById('cookie-reject')?.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'rejected');
+    banner.classList.remove('visible');
+    // Disable GTM dataLayer push on rejection
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'consent_rejected' });
+  });
+}
+
+/* ── Back to Top ──────────────────────────────────────── */
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  const updateVisibility = () => btn.classList.toggle('visible', window.scrollY > 400);
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+  updateVisibility();
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ── Open/Closed Status Badge ─────────────────────────── */
+function initStatusBadge() {
+  const badge = document.getElementById('open-status');
+  if (!badge) return;
+
+  const lang = document.documentElement.lang || 'es';
+  const labels = {
+    es: { open: 'Abierto ahora', closed: 'Cerrado ahora' },
+    en: { open: 'Open now',      closed: 'Closed now' },
+    eu: { open: 'Irekita orain', closed: 'Itxita orain' },
+    fr: { open: 'Ouvert',        closed: 'Fermé' }
+  };
+  const L = labels[lang] || labels.es;
+
+  // Schedule: Mon-Fri 09-13 & 17-20, Sat 09-13, Sun closed. Spain time (UTC+1/+2)
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Madrid' }));
+  const day = now.getDay(); // 0=Sun, 6=Sat
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const t = h * 60 + m;
+
+  let isOpen = false;
+  if (day >= 1 && day <= 5) {
+    isOpen = (t >= 540 && t < 780) || (t >= 1020 && t < 1200);
+  } else if (day === 6) {
+    isOpen = t >= 540 && t < 780;
+  }
+
+  badge.textContent = isOpen ? L.open : L.closed;
+  badge.className = `status-badge ${isOpen ? 'open' : 'closed'}`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initFooter();
   initLoader();
   initCursor();
   initNav();
@@ -730,6 +894,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransitions();
   initVideoParallax();
   initSectionHeaderVideos();
+  initCookieBanner();
+  initBackToTop();
+  initStatusBadge();
 
   // Refresh ScrollTrigger after images load
   window.addEventListener('load', () => ScrollTrigger.refresh());

@@ -36,7 +36,7 @@
   <!-- ── Twitter Card ─────────────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Farmacia Fernández Díez — Bera, Navarra">
-  <meta name="twitter:description" content="Farmacia comunitaria en Bera. Atención personalizada, parafarmacia y más.">
+  <meta name="twitter:description" content="Farmacia comunitaria en Bera, Navarra. Atención farmacéutica personalizada, parafarmacia, ortopedia y dermofarmacia. Tel. 948 63 06 31.">
   <meta name="twitter:image" content="https://farmaciafernandez.es/assets/images/exterior.jpg">
 
   <!-- ── Geo tags ──────────────────────────────────────── -->
@@ -46,15 +46,16 @@
   <meta name="ICBM" content="43.2823, -1.6841">
 
   <!-- ── Favicon ──────────────────────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="apple-touch-icon" href="../assets/images/logo.png">
 
   <!-- ── Fonts & CSS ──────────────────────────────────── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" as="image" href="../assets/images/exterior.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700&display=swap">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF7F0">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1B4332">
   <script>document.documentElement.classList.add('js-ready');</script>
@@ -119,6 +120,21 @@
         "@type": "Question",
         "name": "¿Cómo contactar con la farmacia?",
         "acceptedAnswer": { "@type": "Answer", "text": "Teléfono: 948 63 06 31. Email: farmaciafernandez@hotmail.es. Instagram: @farmacia_fdez." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios ofrece la Farmacia Fernández Díez?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos dispensación de medicamentos, consejo farmacéutico personalizado, dermofarmacia y cosmética, control gratuito de tensión arterial, ortopedia y material sanitario, y productos naturales y fitoterapia." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tienen parafarmacia en la farmacia de Bera?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, disponemos de una amplia sección de parafarmacia con productos de dermofarmacia, cosmética, higiene personal, nutrición y complementos alimenticios de las mejores marcas." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se puede aparcar cerca de la farmacia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La farmacia está situada en la Plaza de los Fueros, 4, en el centro de Bera (Navarra). Hay aparcamiento disponible en la plaza y en las calles adyacentes." }
       }
     ]
   }
@@ -129,6 +145,15 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBVPJV6G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" role="region" aria-label="Aviso de cookies" aria-live="polite">
+  <p class="cookie-banner-text">Usamos cookies de análisis (Google Analytics) para mejorar tu experiencia. Puedes aceptar o rechazar su uso. <a href="./cookies.html">Política de cookies</a>.</p>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn-accept" id="cookie-accept">Aceptar</button>
+    <button class="cookie-btn-reject" id="cookie-reject">Rechazar</button>
+  </div>
+</div>
 
 <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
@@ -299,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
-    <div style="text-align:center;margin-top:3rem;">
+    <div class="services-cta-wrap">
       <a href="./servicios.html" class="btn btn-green reveal" data-hover>
         Ver todos los servicios
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -347,6 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="reveal">
         <span class="stat-num" data-count="6" data-suffix=" días">6 días</span>
         <p class="stat-label">A tu disposición</p>
+        <span class="status-badge" id="open-status"></span>
       </div>
       <div class="reveal">
         <a href="tel:+34948630631" translate="no" class="stat-phone">948 63 06 31</a>
@@ -423,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="info-grid">
       <div>
-        <h3 class="reveal" style="margin-bottom:1.5rem;font-size:1.3rem;">Horario de apertura</h3>
+        <h3 class="reveal info-section-h3">Horario de apertura</h3>
         <table class="hours-table" aria-label="Horario semanal de la farmacia">
           <tbody>
             <tr class="reveal">
@@ -443,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div>
-        <h3 class="reveal" style="margin-bottom:1.5rem;font-size:1.3rem;">Cómo encontrarnos</h3>
+        <h3 class="reveal info-section-h3">Cómo encontrarnos</h3>
         <div class="contact-info-block">
           <div class="contact-info-item reveal">
             <div class="contact-info-icon" aria-hidden="true">
@@ -489,6 +515,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- ── FAQ ──────────────────────────────────────────── -->
+  <section class="section faq-section" aria-labelledby="faq-title">
+    <div class="section-header">
+      <p class="section-label">Preguntas frecuentes</p>
+      <h2 id="faq-title" class="reveal">Resolvemos tus <em>dudas</em></h2>
+      <div class="gold-divider reveal"></div>
+    </div>
+    <div class="faq-list" role="list">
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Cuál es el horario de la farmacia?</summary>
+        <p class="faq-answer">Lunes a viernes: 09:00–13:00 y 17:00–20:00. Sábados: 09:00–13:00. Domingos: cerrado.</p>
+      </details>
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Dónde está la Farmacia Fernández Díez?</summary>
+        <p class="faq-answer">Estamos en Plaza de los Fueros, 4, Bera (Navarra), 31780. En el corazón del casco urbano, fácilmente accesible a pie y en coche.</p>
+      </details>
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Cómo contactar con la farmacia?</summary>
+        <p class="faq-answer">Teléfono: <a href="tel:+34948630631" translate="no">948 63 06 31</a>. Email: <a href="mailto:farmaciafernandez@hotmail.es" translate="no">farmaciafernandez@hotmail.es</a>. Instagram: <a href="https://www.instagram.com/farmacia_fdez/" target="_blank" rel="noopener noreferrer">@farmacia_fdez</a>.</p>
+      </details>
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Qué servicios ofrece la farmacia?</summary>
+        <p class="faq-answer">Dispensación de medicamentos, consejo farmacéutico personalizado, dermofarmacia y cosmética, control gratuito de tensión arterial, ortopedia y material sanitario, y productos naturales y fitoterapia.</p>
+      </details>
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Tienen parafarmacia?</summary>
+        <p class="faq-answer">Sí, disponemos de una amplia sección de parafarmacia con productos de dermofarmacia, cosmética, higiene personal, nutrición y complementos alimenticios de las mejores marcas.</p>
+      </details>
+      <details class="faq-item reveal" role="listitem">
+        <summary class="faq-question">¿Se puede aparcar cerca de la farmacia?</summary>
+        <p class="faq-answer">La farmacia está en la Plaza de los Fueros, 4, Bera. Hay aparcamiento disponible en la plaza y en las calles adyacentes del centro.</p>
+      </details>
+    </div>
+  </section>
+
   <!-- ── Map ───────────────────────────────────────── -->
   <div class="map-section" aria-label="Mapa de ubicación de la farmacia">
     <iframe
@@ -496,7 +557,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       title="Ubicación de Farmacia Fernández Díez en Plaza de los Fueros, 4, Bera"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      aria-label="Google Maps — Farmacia Fernández Díez"
     ></iframe>
     <div class="map-overlay" role="complementary" aria-label="Información de ubicación">
       <h4>Farmacia Fernández Díez</h4>
@@ -563,20 +623,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- Back to Top -->
+<a href="#main" class="back-to-top" aria-label="Volver arriba" id="back-to-top">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+</a>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/34948630631" class="whatsapp-float" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <!-- ── Scripts ─────────────────────────────────────── -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
 <script src="../assets/js/animations.js"></script>
-<script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-
-  // Highlight today's hours row
-  const days = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
-  const today = days[new Date().getDay()];
-  const rows = document.querySelectorAll('.hours-table tr');
-  if (today === 'sábado' && rows[1]) rows[1].classList.add('today');
-  else if (today !== 'domingo' && rows[0]) rows[0].classList.add('today');
-  else if (rows[2]) rows[2].classList.add('today');
-</script>
 </body>
 </html>

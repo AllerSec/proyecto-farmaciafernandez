@@ -23,6 +23,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/servicios.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/es/nosotros.html</loc>
@@ -33,6 +34,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/pharmacie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/nosotros.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/es/contacto.html</loc>
@@ -43,6 +45,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/contacto.html"/>
   </url>
 
   <!-- Basque pages -->
@@ -55,6 +58,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/zerbitzuak.html</loc>
@@ -65,6 +69,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/servicios.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/guretzat.html</loc>
@@ -75,6 +80,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/pharmacie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/nosotros.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/kontaktua.html</loc>
@@ -85,6 +91,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/contacto.html"/>
   </url>
 
   <!-- French pages -->
@@ -108,6 +115,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/servicios.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/fr/pharmacie.html</loc>
@@ -118,6 +126,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/pharmacie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/nosotros.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/fr/contact.html</loc>
@@ -128,6 +137,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/contacto.html"/>
   </url>
 
   <!-- English pages -->
@@ -140,6 +150,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/services.html</loc>
@@ -150,6 +161,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/servicios.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/about.html</loc>
@@ -160,6 +172,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/pharmacie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/nosotros.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/contact.html</loc>
@@ -170,6 +183,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/contacto.html"/>
   </url>
 
   <!-- Legal pages -->
@@ -182,6 +196,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/lege-oharra.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/legal-notice.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/aviso-legal.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/es/privacidad.html</loc>
@@ -192,6 +207,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/pribatutasuna.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/privacidad.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/es/cookies.html</loc>
@@ -202,6 +218,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/cookieak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/cookies.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/lege-oharra.html</loc>
@@ -212,6 +229,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/lege-oharra.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/legal-notice.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/aviso-legal.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/pribatutasuna.html</loc>
@@ -222,6 +240,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/pribatutasuna.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/privacidad.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/eu/cookieak.html</loc>
@@ -232,6 +251,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/cookieak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/cookies.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/legal-notice.html</loc>
@@ -242,6 +262,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/lege-oharra.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/legal-notice.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/aviso-legal.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/privacy.html</loc>
@@ -252,6 +273,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/pribatutasuna.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/privacidad.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/en/cookies.html</loc>
@@ -262,6 +284,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/cookieak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/cookies.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/fr/mentions-legales.html</loc>
@@ -272,6 +295,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/lege-oharra.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/legal-notice.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/aviso-legal.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/fr/confidentialite.html</loc>
@@ -282,6 +306,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/pribatutasuna.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/privacidad.html"/>
   </url>
   <url>
     <loc>https://farmaciafernandez.es/fr/cookies.html</loc>
@@ -292,6 +317,7 @@
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandez.es/eu/cookieak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandez.es/en/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://farmaciafernandez.es/fr/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://farmaciafernandez.es/es/cookies.html"/>
   </url>
 
 </urlset>
