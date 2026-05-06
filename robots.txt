@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
-Sitemap: https://farmaciafernandez.es/sitemap.xml
+Sitemap: https://farmaciafernandezbera.com/sitemap.xml
