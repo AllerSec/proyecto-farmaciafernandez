@@ -64,8 +64,7 @@ function dismissLoader() {
 function initLoader() {
   const loader = document.getElementById('page-loader');
   if (!loader) return;
-
-  // Activate loader now that JS/GSAP is confirmed working
+  // Page loader removed for performance; keep guard for legacy markup
   document.body.classList.add('js-loader-active');
 
   // Safety net: always dismiss after 800ms regardless of GSAP state
