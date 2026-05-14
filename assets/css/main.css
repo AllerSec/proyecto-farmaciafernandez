@@ -8,7 +8,7 @@
 
 /* ── Variables ──────────────────────────────────────────── */
 :root {
-  --gold:          #B8860B;
+  --gold:          #8C6508;
   --gold-light:    #D4A843;
   --gold-pale:     #F5E9C8;
   --green-deep:    #1B4332;
@@ -195,7 +195,9 @@ html.js-ready .loader-logo {
 }
 .nav-logo img {
   height: 44px;
-  width: auto;
+  width: 44px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   transition: transform var(--transition);
 }
 .nav-logo:hover img { transform: scale(1.05); }
@@ -381,7 +383,7 @@ html.js-ready .loader-logo {
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
-  .nav-logo img { height: 34px; }
+  .nav-logo img { height: 34px; width: 34px; }
   .nav-logo { gap: .5rem; }
   .nav-logo-name { font-size: .85rem; }
   .nav-logo-sub { font-size: .6rem; letter-spacing: .08em; }
@@ -827,13 +829,26 @@ html.js-ready .hero-scroll { opacity: 0; }
   flex: 1;
 }
 .carousel-dot {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  transition: background-color var(--transition);
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+}
+.carousel-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.4);
+  transform: translate(-50%, -50%);
   transition: background-color var(--transition), width var(--transition), border-radius var(--transition);
-  cursor: pointer;
 }
-.carousel-dot.active {
+.carousel-dot.active::before {
   background: var(--gold-light);
   width: 20px;
   border-radius: 3px;
@@ -842,7 +857,7 @@ html.js-ready .hero-scroll { opacity: 0; }
   font-family: var(--font-display);
   font-size: .88rem;
   font-weight: 400;
-  color: rgba(255,255,255,.38);
+  color: rgba(255,255,255,.78);
   letter-spacing: .08em;
   min-width: 3rem;
   text-align: right;
@@ -1427,10 +1442,10 @@ html.js-ready .services-bio-banner p { opacity: 0; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
-.footer-brand img { height: 52px; filter: brightness(0) invert(.9); margin-bottom: 1rem; }
+.footer-brand img { height: 52px; width: 52px; aspect-ratio: 1 / 1; object-fit: contain; filter: brightness(0) invert(.9); margin-bottom: 1rem; }
 .footer-brand p {
   font-size: .88rem;
-  color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,.78);
   max-width: 280px;
   line-height: 1.6;
 }
@@ -1455,12 +1470,12 @@ html.js-ready .services-bio-banner p { opacity: 0; }
   background: rgba(184,134,11,.1);
 }
 
-.footer-col h5 {
+.footer-col h3 {
   font-family: var(--font-body);
   font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: .14em;
-  color: rgba(255,255,255,.35);
+  color: rgba(255,255,255,.78);
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -1481,7 +1496,7 @@ html.js-ready .services-bio-banner p { opacity: 0; }
 .footer-contact-item svg { color: var(--gold); margin-top: 1px; flex-shrink: 0; }
 .footer-contact-item span {
   font-size: .875rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.78);
   line-height: 1.5;
 }
 
@@ -1494,7 +1509,7 @@ html.js-ready .services-bio-banner p { opacity: 0; }
 }
 .footer-owner {
   font-size: .75rem;
-  color: rgba(255,255,255,.32);
+  color: rgba(255,255,255,.78);
   margin-top: .5rem;
   letter-spacing: .02em;
   line-height: 1.5;
@@ -1505,7 +1520,7 @@ html.js-ready .services-bio-banner p { opacity: 0; }
   gap: .18rem;
 }
 .footer-phones a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.78);
   font-size: .875rem;
   line-height: 1.5;
   transition: color var(--transition);
@@ -1513,9 +1528,14 @@ html.js-ready .services-bio-banner p { opacity: 0; }
 .footer-phones a:hover { color: var(--gold-light); }
 .footer-copy {
   font-size: .78rem;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.78);
 }
-.footer-copy a { color: var(--gold); transition: opacity var(--transition); }
+.footer-copy a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity var(--transition);
+}
 .footer-copy a:hover { opacity: .8; }
 .footer-legal {
   display: flex;
@@ -1523,10 +1543,10 @@ html.js-ready .services-bio-banner p { opacity: 0; }
 }
 .footer-legal a {
   font-size: .75rem;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.78);
   transition: color var(--transition);
 }
-.footer-legal a:hover { color: rgba(255,255,255,.5); }
+.footer-legal a:hover { color: rgba(255,255,255,1); }
 
 /* ── Tooltip ────────────────────────────────────────────────── */
 [data-tooltip] {
