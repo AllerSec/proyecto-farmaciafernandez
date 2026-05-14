@@ -22,12 +22,20 @@
       }
     } catch(e){}
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- Google Tag Manager (lazy: loads on first user interaction or after 4s idle) -->
+  <script>
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return; loaded = true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBVPJV6G');
+      }
+      var events = ['scroll','mousemove','touchstart','keydown','click'];
+      events.forEach(function(e){ window.addEventListener(e, loadGTM, {once:true, passive:true}); });
+      if ('requestIdleCallback' in window) { requestIdleCallback(function(){ setTimeout(loadGTM, 4000); }); }
+      else { setTimeout(loadGTM, 4000); }
+    })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <title>Farmacia Fernández Díez — Bera, Nafarroa | Zure farmazia</title>
@@ -199,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor-ring" aria-hidden="true"></div>
 
 <div id="page-loader" role="status" aria-label="Kargatzen…">
-  <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
+  <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
   <div class="loader-bar"></div>
 </div>
 
@@ -361,8 +369,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section about-section" aria-labelledby="gutaz-title">
     <div class="about-grid">
       <div class="about-visual">
-        <picture><source srcset="../assets/images/interior-1.webp" type="image/webp"><img
-          src="../assets/images/interior-1.jpg"
+        <picture><source type="image/webp" srcset="../assets/images/interior-1-400.webp 400w, ../assets/images/interior-1-800.webp 800w, ../assets/images/interior-1.webp 1152w" sizes="(max-width: 768px) 90vw, 600px"><img
+          src="../assets/images/interior-1-800.jpg"
+          srcset="../assets/images/interior-1-400.jpg 400w, ../assets/images/interior-1-800.jpg 800w" sizes="(max-width: 768px) 90vw, 600px"
           alt="Farmacia Fernández Díez-en barrualdea Beran"
           class="about-img-main reveal-left"
           width="600" height="800"
@@ -562,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
+      <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
       <p>Farmazia komunitarioa Beran, Nafarroa. Arreta pertsonalizatua familia osorentzat.</p>
       <p class="footer-owner">Arantza Fernández Díez<br>Farmazeutiko Titularra</p>
       <div class="footer-social" aria-label="Sare sozialak">

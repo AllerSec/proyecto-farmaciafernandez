@@ -22,12 +22,20 @@
       }
     } catch(e){}
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- Google Tag Manager (lazy: loads on first user interaction or after 4s idle) -->
+  <script>
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return; loaded = true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBVPJV6G');
+      }
+      var events = ['scroll','mousemove','touchstart','keydown','click'];
+      events.forEach(function(e){ window.addEventListener(e, loadGTM, {once:true, passive:true}); });
+      if ('requestIdleCallback' in window) { requestIdleCallback(function(){ setTimeout(loadGTM, 4000); }); }
+      else { setTimeout(loadGTM, 4000); }
+    })();
+  </script>
   <!-- End Google Tag Manager -->
   <title>Contact — Farmacia Fernández Díez | Bera, Navarra</title>
   <meta name="description" content="Contact Farmacia Fernández Díez in Bera. Phone: 948 63 06 31. Email: farmaciafernandez@hotmail.es. Plaza de los Fueros, 4. Hours: Mon-Fri 9-13 and 17-20, Sat 9-13.">
@@ -102,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" aria-hidden="true"></div>
 <div id="page-loader" role="status" aria-label="Loading…">
-  <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
+  <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
   <div class="loader-bar"></div>
 </div>
 
@@ -301,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
+      <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
       <p>Community pharmacy in Bera, Navarra.</p>
       <p class="footer-owner">Arantza Fernández Díez<br>Pharmacist Proprietor</p>
       <div class="footer-social">

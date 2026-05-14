@@ -22,12 +22,20 @@
       }
     } catch(e){}
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- Google Tag Manager (lazy: loads on first user interaction or after 4s idle) -->
+  <script>
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return; loaded = true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBVPJV6G');
+      }
+      var events = ['scroll','mousemove','touchstart','keydown','click'];
+      events.forEach(function(e){ window.addEventListener(e, loadGTM, {once:true, passive:true}); });
+      if ('requestIdleCallback' in window) { requestIdleCallback(function(){ setTimeout(loadGTM, 4000); }); }
+      else { setTimeout(loadGTM, 4000); }
+    })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- ── SEO Primary ─────────────────────────────────── -->
@@ -210,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Page Loader -->
 <div id="page-loader" role="status" aria-label="Cargando…">
-  <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
+  <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" class="loader-logo" width="80" height="80"></picture>
   <div class="loader-bar"></div>
 </div>
 
@@ -218,7 +226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <nav class="site-nav" role="navigation" aria-label="Navegación principal">
     <a href="./" class="nav-logo">
-      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Logo Farmacia Fernández Díez" width="44" height="44" loading="eager"></picture>
+      <picture><source srcset="../assets/images/logo-88.webp" type="image/webp"><img src="../assets/images/logo-88.png" alt="Logo Farmacia Fernández Díez" width="44" height="44" loading="eager"></picture>
       <div class="nav-logo-text">
         <span class="nav-logo-name" translate="no">Farmacia Fernández</span>
         <span class="nav-logo-sub">Bera · Navarra</span>
@@ -374,8 +382,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section about-section" aria-labelledby="nosotros-title">
     <div class="about-grid">
       <div class="about-visual">
-        <picture><source srcset="../assets/images/interior-1.webp" type="image/webp"><img
-          src="../assets/images/interior-1.jpg"
+        <picture><source type="image/webp" srcset="../assets/images/interior-1-400.webp 400w, ../assets/images/interior-1-800.webp 800w, ../assets/images/interior-1.webp 1152w" sizes="(max-width: 768px) 90vw, 600px"><img
+          src="../assets/images/interior-1-800.jpg"
+          srcset="../assets/images/interior-1-400.jpg 400w, ../assets/images/interior-1-800.jpg 800w" sizes="(max-width: 768px) 90vw, 600px"
           alt="Interior de la Farmacia Fernández Díez en Bera"
           class="about-img-main reveal-left"
           width="600" height="800"
@@ -611,7 +620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <picture><source srcset="../assets/images/logo.webp" type="image/webp"><img src="../assets/images/logo.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
+      <picture><source srcset="../assets/images/logo-160.webp" type="image/webp"><img src="../assets/images/logo-160.png" alt="Farmacia Fernández Díez" width="52" height="52" loading="lazy"></picture>
       <p>Oficina de farmacia comunitaria en Bera, Navarra. Atención personalizada para toda la familia.</p>
       <p class="footer-owner">Arantza Fernández Díez<br>Farmacéutica Titular</p>
       <div class="footer-social" aria-label="Redes sociales">

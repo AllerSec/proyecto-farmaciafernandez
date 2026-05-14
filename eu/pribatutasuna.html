@@ -22,12 +22,20 @@
       }
     } catch(e){}
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBVPJV6G');</script>
+  <!-- Google Tag Manager (lazy: loads on first user interaction or after 4s idle) -->
+  <script>
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return; loaded = true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NBVPJV6G');
+      }
+      var events = ['scroll','mousemove','touchstart','keydown','click'];
+      events.forEach(function(e){ window.addEventListener(e, loadGTM, {once:true, passive:true}); });
+      if ('requestIdleCallback' in window) { requestIdleCallback(function(){ setTimeout(loadGTM, 4000); }); }
+      else { setTimeout(loadGTM, 4000); }
+    })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <title>Pribatutasun-politika — Farmacia Fernández Díez</title>
