@@ -811,27 +811,42 @@ function initSectionHeaderVideos() {
   });
 }
 
-/* ── Cookie Consent ───────────────────────────────────── */
+/* ── Cookie Consent (Google Consent Mode v2) ──────────── */
+function gtag(){ window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments); }
+
+function applyConsent(state) {
+  const granted = state === 'accepted';
+  gtag('consent', 'update', {
+    'ad_storage': granted ? 'granted' : 'denied',
+    'ad_user_data': granted ? 'granted' : 'denied',
+    'ad_personalization': granted ? 'granted' : 'denied',
+    'analytics_storage': granted ? 'granted' : 'denied'
+  });
+  gtag('event', granted ? 'consent_accepted' : 'consent_rejected');
+}
+
 function initCookieBanner() {
   const banner = document.getElementById('cookie-banner');
   if (!banner) return;
 
-  const accepted = localStorage.getItem('cookie-consent');
-  if (accepted) return;
+  const stored = localStorage.getItem('cookie-consent');
+  if (stored) {
+    applyConsent(stored);
+    return;
+  }
 
   setTimeout(() => banner.classList.add('visible'), 1200);
 
   document.getElementById('cookie-accept')?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'accepted');
+    applyConsent('accepted');
     banner.classList.remove('visible');
   });
 
   document.getElementById('cookie-reject')?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'rejected');
+    applyConsent('rejected');
     banner.classList.remove('visible');
-    // Disable GTM dataLayer push on rejection
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'consent_rejected' });
   });
 }
 

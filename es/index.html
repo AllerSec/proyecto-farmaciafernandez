@@ -4,6 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Consent Mode v2 (default denied) + GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+    try {
+      var c = localStorage.getItem('cookie-consent');
+      if (c === 'accepted') {
+        gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+      }
+    } catch(e){}
+  </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -31,6 +49,9 @@
   <meta property="og:url" content="https://farmaciafernandezbera.com/es/">
   <meta property="og:image" content="https://farmaciafernandezbera.com/assets/images/exterior.jpg">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="eu_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:site_name" content="Farmacia Fernández Díez">
 
   <!-- ── Twitter Card ─────────────────────────────────── -->
@@ -97,6 +118,29 @@
     "priceRange": "€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Cash, Credit Card"
+  }
+  </script>
+
+  <!-- ── WebSite + Breadcrumb Schema ──────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://farmaciafernandezbera.com/#website",
+        "url": "https://farmaciafernandezbera.com/",
+        "name": "Farmacia Fernández Díez",
+        "inLanguage": "es-ES",
+        "publisher": { "@id": "https://farmaciafernandezbera.com/#pharmacy" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://farmaciafernandezbera.com/es/" }
+        ]
+      }
+    ]
   }
   </script>
 

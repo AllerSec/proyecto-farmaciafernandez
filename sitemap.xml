@@ -5,7 +5,7 @@
   <!-- Spanish pages -->
   <url>
     <loc>https://farmaciafernandezbera.com/es/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/"/>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/es/servicios.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/servicios.html"/>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/es/nosotros.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/nosotros.html"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/es/contacto.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/contacto.html"/>
@@ -51,9 +51,9 @@
   <!-- Basque pages -->
   <url>
     <loc>https://farmaciafernandezbera.com/eu/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/"/>
@@ -62,9 +62,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/zerbitzuak.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/services.html"/>
@@ -73,9 +73,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/guretzat.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/nosotros.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/about.html"/>
@@ -84,9 +84,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/kontaktua.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/contact.html"/>
@@ -97,9 +97,9 @@
   <!-- French pages -->
   <url>
     <loc>https://farmaciafernandezbera.com/fr/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/"/>
@@ -108,9 +108,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/services.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/services.html"/>
@@ -119,9 +119,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/pharmacie.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/nosotros.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/about.html"/>
@@ -130,9 +130,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/contact.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/contact.html"/>
@@ -143,9 +143,9 @@
   <!-- English pages -->
   <url>
     <loc>https://farmaciafernandezbera.com/en/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/"/>
@@ -154,9 +154,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/services.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/zerbitzuak.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/services.html"/>
@@ -165,9 +165,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/about.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/nosotros.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/guretzat.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/about.html"/>
@@ -176,9 +176,9 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/contact.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://farmaciafernandezbera.com/eu/kontaktua.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://farmaciafernandezbera.com/en/contact.html"/>
@@ -189,7 +189,7 @@
   <!-- Legal pages -->
   <url>
     <loc>https://farmaciafernandezbera.com/es/aviso-legal.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/aviso-legal.html"/>
@@ -200,7 +200,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/es/privacidad.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/privacidad.html"/>
@@ -211,7 +211,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/es/cookies.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/cookies.html"/>
@@ -222,7 +222,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/lege-oharra.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/aviso-legal.html"/>
@@ -233,7 +233,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/pribatutasuna.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/privacidad.html"/>
@@ -244,7 +244,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/eu/cookieak.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/cookies.html"/>
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/legal-notice.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/aviso-legal.html"/>
@@ -266,7 +266,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/privacy.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/privacidad.html"/>
@@ -277,7 +277,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/en/cookies.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/cookies.html"/>
@@ -288,7 +288,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/mentions-legales.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/aviso-legal.html"/>
@@ -299,7 +299,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/confidentialite.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/privacidad.html"/>
@@ -310,7 +310,7 @@
   </url>
   <url>
     <loc>https://farmaciafernandezbera.com/fr/cookies.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://farmaciafernandezbera.com/es/cookies.html"/>
