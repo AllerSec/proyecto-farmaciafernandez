@@ -1,0 +1,31 @@
+# Redirect .html URLs to clean URLs (301 permanent)
+# Prevents duplicate content: Netlify serves both /page and /page.html
+# Google was picking /page as canonical instead of /page.html, causing indexing errors
+
+/es/servicios.html      /es/servicios       301!
+/es/nosotros.html       /es/nosotros        301!
+/es/contacto.html       /es/contacto        301!
+/es/aviso-legal.html    /es/aviso-legal     301!
+/es/privacidad.html     /es/privacidad      301!
+/es/cookies.html        /es/cookies         301!
+
+/eu/zerbitzuak.html     /eu/zerbitzuak      301!
+/eu/guretzat.html       /eu/guretzat        301!
+/eu/kontaktua.html      /eu/kontaktua       301!
+/eu/lege-oharra.html    /eu/lege-oharra     301!
+/eu/pribatutasuna.html  /eu/pribatutasuna   301!
+/eu/cookieak.html       /eu/cookieak        301!
+
+/en/services.html       /en/services        301!
+/en/about.html          /en/about           301!
+/en/contact.html        /en/contact         301!
+/en/legal-notice.html   /en/legal-notice    301!
+/en/privacy.html        /en/privacy         301!
+/en/cookies.html        /en/cookies         301!
+
+/fr/services.html       /fr/services        301!
+/fr/pharmacie.html      /fr/pharmacie       301!
+/fr/contact.html        /fr/contact         301!
+/fr/mentions-legales.html /fr/mentions-legales  301!
+/fr/confidentialite.html  /fr/confidentialite   301!
+/fr/cookies.html        /fr/cookies         301!
