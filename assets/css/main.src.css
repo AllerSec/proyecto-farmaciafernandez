@@ -1961,3 +1961,124 @@ html.js-ready .reveal-scale {
   color: var(--green-mid);
   border: 1px solid rgba(82,183,136,.3);
 }
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MODERN UI REFRESH â€” quick bar, marquee, bento, CTA, mobile bar
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* â”€â”€ Hero trust chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.hero-badges{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+.hero-chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;letter-spacing:.05em;color:rgba(250,247,240,.92);background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:.45rem .9rem;border-radius:var(--radius-xl);text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.hero-chip svg{color:var(--gold-light);flex-shrink:0}
+@media (min-width:769px){html.js-ready .hero-badges{opacity:0}}
+.hero .status-badge{margin-top:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero .status-badge.open{background:rgba(82,183,136,.22);color:#A8EAC8;border:1px solid rgba(82,183,136,.35)}
+.hero .status-badge.open::before{background:#6FE3A5;box-shadow:0 0 8px rgba(111,227,165,.8);animation:pulseDot 2s ease-in-out infinite}
+.hero .status-badge.closed{background:rgba(212,168,67,.18);color:#F0D9A0;border:1px solid rgba(212,168,67,.35)}
+.hero .status-badge.closed::before{background:var(--gold-light)}
+@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.7}}
+
+/* â”€â”€ Quick info bar (overlapping hero) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.quick-bar{position:relative;z-index:5;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:1080px;margin:-4.5rem auto 0;padding:0 clamp(1.5rem,5vw,3rem)}
+.quick-card{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(184,134,11,.14);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;box-shadow:var(--shadow-lg);transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition)}
+a.quick-card:hover{transform:translateY(-4px);border-color:rgba(184,134,11,.35);box-shadow:0 16px 48px rgba(27,67,50,.18)}
+.quick-card-icon{width:46px;height:46px;flex-shrink:0;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center}
+.quick-card-icon svg{color:var(--gold-light)}
+.quick-card-text{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.quick-card-label{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-light)}
+.quick-card-value{font-family:var(--font-display);font-size:1.12rem;font-weight:600;color:var(--green-deep);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.quick-card-value .open-txt{color:var(--green-mid)}
+.quick-card-value .closed-txt{color:var(--gold)}
+@media (max-width:860px){.quick-bar{grid-template-columns:1fr;gap:.75rem;margin-top:-3rem}.quick-card{padding:1rem 1.2rem}}
+
+/* â”€â”€ Marquee strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.marquee{background:var(--green-deep);border-block:1px solid rgba(212,168,67,.25);padding:1.1rem 0;overflow:hidden;position:relative}
+.marquee-track{display:flex;align-items:center;width:max-content;animation:marqueeScroll 36s linear infinite;will-change:transform}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:inline-flex;align-items:center;gap:3.5rem;padding-right:3.5rem;font-family:var(--font-display);font-size:1.05rem;font-style:italic;letter-spacing:.06em;color:rgba(250,247,240,.85);white-space:nowrap}
+.marquee-item i{font-style:normal;font-size:.65rem;color:var(--gold-light)}
+@keyframes marqueeScroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;width:100%;justify-content:center}.marquee-item{flex-wrap:wrap;gap:1.5rem;padding-right:1.5rem}}
+
+/* â”€â”€ Bento featured service card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.service-card--featured{grid-column:span 2;background:linear-gradient(135deg,var(--green-deep) 0%,var(--green-mid) 100%);border-color:rgba(212,168,67,.25);display:flex;flex-direction:column;justify-content:flex-end;min-height:260px}
+.service-card--featured::after{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border:1px solid rgba(212,168,67,.25);border-radius:50%;pointer-events:none}
+.service-card--featured h3{color:var(--cream);font-size:1.55rem}
+.service-card--featured p{color:rgba(250,247,240,.75)}
+.service-card--featured .service-icon{background:rgba(255,255,255,.12)}
+.service-card--featured .service-icon svg{color:var(--gold-light)}
+.service-card--featured:hover .service-icon{background:rgba(212,168,67,.25)}
+.service-card--featured:hover .service-icon svg{color:var(--gold-light)}
+@media (max-width:660px){.service-card--featured{grid-column:span 1;min-height:0}}
+.service-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-top:1rem;transition:gap var(--transition),color var(--transition)}
+.service-link:hover{gap:.7rem;color:var(--green-mid)}
+.service-card--featured .service-link{color:var(--gold-light)}
+.service-card--featured .service-link:hover{color:var(--cream)}
+
+/* â”€â”€ Why-us checklist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.why-list{display:flex;flex-direction:column;gap:.85rem;margin:1.5rem 0 2rem}
+.why-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.95rem;color:var(--text-mid);line-height:1.55}
+.why-check{width:22px;height:22px;flex-shrink:0;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:.05rem}
+.why-check svg{color:var(--green-mid)}
+
+/* â”€â”€ Final CTA banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.cta-final{position:relative;overflow:hidden;background:linear-gradient(135deg,#12301F 0%,var(--green-deep) 55%,var(--green-mid) 130%);padding:clamp(4rem,8vw,6.5rem) clamp(1.5rem,5vw,6rem);text-align:center}
+.cta-final::before{content:'';position:absolute;top:-30%;left:-10%;width:480px;height:480px;background:radial-gradient(circle,rgba(212,168,67,.14) 0%,transparent 65%);pointer-events:none}
+.cta-final::after{content:'';position:absolute;bottom:-40%;right:-10%;width:520px;height:520px;background:radial-gradient(circle,rgba(82,183,136,.12) 0%,transparent 65%);pointer-events:none}
+.cta-final>*{position:relative;z-index:1}
+.cta-final .section-label{color:var(--gold-light);justify-content:center}
+.cta-final .section-label::before{background:var(--gold-light)}
+.cta-final h2{color:var(--cream);margin-bottom:1rem}
+.cta-final h2 em{color:var(--gold-light);font-style:italic}
+.cta-final p{color:rgba(250,247,240,.7);max-width:520px;margin:0 auto 2.5rem}
+.cta-final-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-whatsapp:hover{background:#1FBF5B;transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,211,102,.4)}
+
+/* â”€â”€ Brands strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.brands-strip{background:var(--white);padding:2.5rem clamp(1.5rem,5vw,6rem);text-align:center;border-block:1px solid var(--cream-dark)}
+.brands-strip-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--text-light);margin-bottom:1.25rem}
+.brands-strip-list{display:flex;align-items:center;justify-content:center;gap:.75rem 2.5rem;flex-wrap:wrap}
+.brands-strip-list span{font-family:var(--font-display);font-size:clamp(1.15rem,2vw,1.5rem);font-style:italic;color:var(--green-deep);opacity:.75;transition:opacity var(--transition)}
+.brands-strip-list span:hover{opacity:1}
+
+/* â”€â”€ Numbered service cards (servicios) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.service-detail-top{display:flex;align-items:flex-start;justify-content:space-between}
+.service-num{font-family:var(--font-display);font-size:2.4rem;font-weight:300;font-style:italic;color:rgba(250,247,240,.28);line-height:1;user-select:none}
+
+/* â”€â”€ Pull quote (nosotros) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.pull-quote{position:relative;max-width:760px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem);text-align:center}
+.pull-quote::before{content:'\201C';position:absolute;top:-.5rem;left:50%;transform:translateX(-50%);font-family:var(--font-display);font-size:7rem;line-height:1;color:rgba(212,168,67,.3);pointer-events:none}
+.pull-quote blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-style:italic;font-weight:400;line-height:1.4;color:var(--green-deep)}
+.pull-quote figcaption{margin-top:1.5rem;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gold)}
+.pull-quote figcaption span{display:block;font-weight:400;letter-spacing:.08em;color:var(--text-light);margin-top:.25rem}
+
+/* â”€â”€ Nav phone CTA (desktop) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.nav-cta{display:none;align-items:center;gap:.5rem;font-size:.8rem;font-weight:700;letter-spacing:.05em;color:var(--green-deep);background:var(--gold-light);padding:.55rem 1.1rem;border-radius:var(--radius-xl);transition:background-color var(--transition),transform var(--transition),box-shadow var(--transition);white-space:nowrap}
+.nav-cta:hover{background:var(--gold-pale);transform:translateY(-1px);box-shadow:var(--shadow-gold)}
+.nav-cta svg{flex-shrink:0}
+@media (min-width:1100px){.nav-cta{display:inline-flex}}
+.site-nav:not(.scrolled) .nav-cta{background:rgba(255,255,255,.14);color:var(--cream);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.site-nav:not(.scrolled) .nav-cta:hover{background:rgba(255,255,255,.25)}
+
+/* â”€â”€ Sticky mobile action bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.mobile-cta-bar{position:fixed;bottom:0;left:0;right:0;z-index:960;display:none;grid-template-columns:repeat(3,1fr);gap:.5rem;background:rgba(250,247,240,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--cream-dark);padding:.5rem .75rem calc(.5rem + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 24px rgba(27,67,50,.10)}
+.mobile-cta-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;min-height:48px;font-size:.68rem;font-weight:600;letter-spacing:.04em;color:var(--green-deep);border-radius:var(--radius-md);transition:background-color .2s}
+.mobile-cta-item:active{background:var(--green-pale)}
+.mobile-cta-item svg{color:var(--green-mid)}
+.mobile-cta-item--wa svg{color:#25D366}
+@media (max-width:768px){
+  .mobile-cta-bar{display:grid}
+  .whatsapp-float{display:none}
+  .back-to-top{bottom:calc(4.8rem + env(safe-area-inset-bottom,0px));right:1rem}
+  #cookie-banner{bottom:calc(4.8rem + env(safe-area-inset-bottom,0px))}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+}
+
+
+/* CTA tile in services grid */
+.service-card--cta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;text-align:center;background:transparent;border:1.5px dashed rgba(184,134,11,.4);cursor:pointer;font-family:var(--font-display);font-size:1.3rem;font-style:italic;color:var(--green-deep);min-height:180px;transition:border-color var(--transition),background-color var(--transition),transform var(--transition)}
+.service-card--cta:hover{border-color:var(--gold);background:var(--gold-pale);transform:translateY(-4px)}
+.service-card--cta svg{color:var(--gold);transition:transform var(--transition)}
+.service-card--cta:hover svg{transform:translateX(6px)}

@@ -163,7 +163,7 @@ function initNav() {
 
 /* ── Hero Entrance ────────────────────────────────────── */
 function initHeroAnims() {
-  const heroTargets = ['.hero-eyebrow', '.hero h1', '.hero-desc', '.hero-actions', '.hero-scroll'];
+  const heroTargets = ['.hero-eyebrow', '.hero h1', '.hero-desc', '.hero-actions', '.hero-badges', '.hero-scroll'];
 
   // Safety net: guarantee visibility no matter what matchMedia decides.
   // Desktop entrance animation re-hides then reveals via fromTo below.
@@ -196,6 +196,7 @@ function initHeroAnims() {
       .fromTo('.hero h1',      { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .9, ease: 'power3.out' }, '-=.4')
       .fromTo('.hero-desc',    { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .7, ease: 'power3.out' }, '-=.5')
       .fromTo('.hero-actions', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, '-=.4')
+      .fromTo('.hero-badges',  { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: .55, ease: 'power3.out' }, '-=.35')
       .fromTo('.hero-scroll',  { autoAlpha: 0 },        { autoAlpha: 1, duration: .5 }, '-=.2');
   });
 }
@@ -864,15 +865,16 @@ function initBackToTop() {
 
 /* ── Open/Closed Status Badge ─────────────────────────── */
 function initStatusBadge() {
-  const badge = document.getElementById('open-status');
-  if (!badge) return;
+  const badges = document.querySelectorAll('#open-status, [data-open-status]');
+  const todayHours = document.querySelectorAll('[data-today-hours]');
+  if (!badges.length && !todayHours.length) return;
 
   const lang = document.documentElement.lang || 'es';
   const labels = {
-    es: { open: 'Abierto ahora', closed: 'Cerrado ahora' },
-    en: { open: 'Open now',      closed: 'Closed now' },
-    eu: { open: 'Irekita orain', closed: 'Itxita orain' },
-    fr: { open: 'Ouvert',        closed: 'Fermé' }
+    es: { open: 'Abierto ahora', closed: 'Cerrado ahora', sun: 'Cerrado hoy' },
+    en: { open: 'Open now',      closed: 'Closed now',    sun: 'Closed today' },
+    eu: { open: 'Irekita orain', closed: 'Itxita orain',  sun: 'Gaur itxita' },
+    fr: { open: 'Ouvert',        closed: 'Fermé',         sun: 'Fermé aujourd\'hui' }
   };
   const L = labels[lang] || labels.es;
 
@@ -890,8 +892,24 @@ function initStatusBadge() {
     isOpen = t >= 540 && t < 780;
   }
 
-  badge.textContent = isOpen ? L.open : L.closed;
-  badge.className = `status-badge ${isOpen ? 'open' : 'closed'}`;
+  badges.forEach(badge => {
+    badge.textContent = isOpen ? L.open : L.closed;
+    badge.classList.remove('open', 'closed');
+    badge.classList.add(isOpen ? 'open' : 'closed');
+  });
+
+  // Today's schedule text (quick info bar)
+  todayHours.forEach(el => {
+    el.textContent = '';
+    const state = document.createElement('span');
+    state.className = isOpen ? 'open-txt' : 'closed-txt';
+    state.textContent = isOpen ? L.open : L.closed;
+    el.appendChild(state);
+    if (day !== 0) {
+      const txt = day === 6 ? '09:00–13:00' : '09:00–13:00 · 17:00–20:00';
+      el.appendChild(document.createTextNode(' · ' + txt));
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

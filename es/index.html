@@ -226,8 +226,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" aria-hidden="true"></div>
 
-</div>
-
 <!-- ── Navigation ────────────────────────────────────── -->
 <header>
   <nav class="site-nav" role="navigation" aria-label="Navegación principal">
@@ -247,6 +245,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
 
     <div class="nav-right">
+      <a href="tel:+34948630631" class="nav-cta" translate="no" data-hover aria-label="Llamar a la farmacia: 948 63 06 31">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        948 63 06 31
+      </a>
       <div class="lang-switcher" role="group" aria-label="Selector de idioma">
         <a href="../es/" class="lang-btn active" lang="es" aria-current="page">ES</a>
         <span class="lang-sep" aria-hidden="true"></span>
@@ -293,8 +295,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>Tu farmacia<br><em>de confianza</em><br>en Bera</h1>
 
       <p class="hero-desc">
-        Atención farmacéutica personalizada en el corazón de Bera.
-        Salud, consejo y cuidado para toda la familia.
+        Consejo farmacéutico profesional sin cita previa y atención cercana
+        para toda la familia, en el corazón de Bera.
       </p>
 
       <div class="hero-actions">
@@ -307,6 +309,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           948 63 06 31
         </a>
       </div>
+
+      <div class="hero-badges">
+        <span class="status-badge" data-open-status></span>
+        <span class="hero-chip">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Sin cita previa
+        </span>
+        <span class="hero-chip" aria-label="Te atendemos en castellano, euskera, inglés y francés">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          ES · EU · EN · FR
+        </span>
+      </div>
     </div>
 
     <div class="hero-scroll" aria-hidden="true">
@@ -314,6 +328,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-scroll-line"></div>
     </div>
   </section>
+
+  <!-- ── Quick Info Bar ────────────────────────────── -->
+  <div class="quick-bar" aria-label="Información rápida">
+    <div class="quick-card">
+      <div class="quick-card-icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="quick-card-text">
+        <span class="quick-card-label">Horario de hoy</span>
+        <span class="quick-card-value" data-today-hours>09:00–13:00 · 17:00–20:00</span>
+      </div>
+    </div>
+    <a href="tel:+34948630631" class="quick-card" data-hover>
+      <div class="quick-card-icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      </div>
+      <div class="quick-card-text">
+        <span class="quick-card-label">Llámanos</span>
+        <span class="quick-card-value" translate="no">948 63 06 31</span>
+      </div>
+    </a>
+    <a href="https://maps.google.com/?q=Plaza+de+los+Fueros+4+Bera+Navarra" target="_blank" rel="noopener noreferrer" class="quick-card" data-hover>
+      <div class="quick-card-icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </div>
+      <div class="quick-card-text">
+        <span class="quick-card-label">Visítanos</span>
+        <span class="quick-card-value">Plaza de los Fueros, 4</span>
+      </div>
+    </a>
+  </div>
 
   <!-- ── Services Highlights ───────────────────────── -->
   <section class="section" id="servicios" aria-labelledby="servicios-title">
@@ -326,20 +371,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="services-grid">
 
+      <article class="service-card service-card--featured reveal">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3>Consejo farmacéutico</h3>
+        <p>Te escuchamos y orientamos sin cita previa. Asesoramiento profesional personalizado sobre salud, medicamentos y tratamientos, con el tiempo que mereces.</p>
+        <a href="./servicios.html#svc-2" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </article>
+
       <article class="service-card reveal">
         <div class="service-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-4m-2 0V1m0 2a2 2 0 01-2 2H9a2 2 0 01-2-2m2 0h2M12 11v6m-3-3h6"/></svg>
         </div>
         <h3>Dispensación de medicamentos</h3>
         <p>Entrega y seguimiento de medicamentos con información completa sobre su uso correcto y seguro.</p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-        </div>
-        <h3>Consejo farmacéutico</h3>
-        <p>Asesoramiento profesional personalizado para resolver tus dudas sobre salud, medicamentos y tratamientos.</p>
+        <a href="./servicios.html#svc-1" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </article>
 
       <article class="service-card reveal">
@@ -348,6 +399,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3>Dermofarmacia y cosmética</h3>
         <p>Productos de cuidado de la piel y cosmética seleccionados por su eficacia y calidad.</p>
+        <a href="./servicios.html#svc-3" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </article>
 
       <article class="service-card reveal">
@@ -356,6 +410,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3>Control tensión arterial</h3>
         <p>Medición de tensión arterial gratuita. Seguimiento y registro para tu control cardiovascular.</p>
+        <a href="./servicios.html#svc-4" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </article>
 
       <article class="service-card reveal">
@@ -364,6 +421,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3>Ortopedia y material sanitario</h3>
         <p>Amplia gama de productos ortopédicos y material sanitario de primeras marcas.</p>
+        <a href="./servicios.html#svc-5" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </article>
 
       <article class="service-card reveal">
@@ -372,17 +432,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3>Productos naturales</h3>
         <p>Selección de productos naturales, fitoterapia, vitaminas y complementos alimenticios de calidad.</p>
+        <a href="./servicios.html#svc-6" class="service-link" data-hover>Saber más
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </article>
 
-    </div>
-
-    <div class="services-cta-wrap">
-      <a href="./servicios.html" class="btn btn-green reveal" data-hover>
-        Ver todos los servicios
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      <a href="./servicios.html" class="service-card service-card--cta reveal" data-hover>
+        <span>Ver todos<br>los servicios</span>
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
+
     </div>
   </section>
+
+  <!-- ── Marquee ───────────────────────────────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Consejo farmacéutico <i>✦</i> Dispensación <i>✦</i> Dermofarmacia <i>✦</i> Ortopedia <i>✦</i> Tensión arterial <i>✦</i> Fitoterapia <i>✦</i> Preparados magistrales <i>✦</i> Parafarmacia <i>✦</i></span>
+      <span class="marquee-item">Consejo farmacéutico <i>✦</i> Dispensación <i>✦</i> Dermofarmacia <i>✦</i> Ortopedia <i>✦</i> Tensión arterial <i>✦</i> Fitoterapia <i>✦</i> Preparados magistrales <i>✦</i> Parafarmacia <i>✦</i></span>
+    </div>
+  </div>
 
   <!-- ── About Strip ───────────────────────────────── -->
   <section class="section about-section" aria-labelledby="nosotros-title">
@@ -414,6 +483,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="gold-divider reveal"></div>
         <p class="reveal">Farmacia Fernández Díez lleva años siendo el punto de referencia para la salud de Bera y sus alrededores. Bajo la titularidad de Arantza Fernández Díez, ofrecemos una atención farmacéutica cercana, profesional y personalizada.</p>
         <p class="reveal">Más que una farmacia, somos un servicio de salud comunitario donde cada persona recibe la atención y el tiempo que merece. Te escuchamos, te asesoramos y te acompañamos en el cuidado de tu salud.</p>
+        <ul class="why-list reveal" role="list">
+          <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Consejo farmacéutico profesional, sin cita previa</li>
+          <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Te atendemos en castellano, euskera, inglés y francés</li>
+          <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Control de tensión arterial gratuito</li>
+          <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Encargos y reservas por teléfono o WhatsApp</li>
+        </ul>
         <a href="./nosotros.html" class="btn btn-ghost reveal" data-hover>Conocernos mejor</a>
       </div>
     </div>
@@ -436,8 +511,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="stat-label">Atención personalizada</p>
       </div>
       <div class="reveal">
-        <span class="stat-num" data-count="1">1</span>
-        <p class="stat-label">Farmacia, tu farmacia</p>
+        <span class="stat-num" data-count="4" data-suffix=" idiomas">4 idiomas</span>
+        <p class="stat-label">ES · EU · EN · FR</p>
       </div>
     </div>
   </div>
@@ -603,6 +678,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- ── Final CTA ─────────────────────────────────── -->
+  <section class="cta-final" aria-labelledby="cta-final-title">
+    <p class="section-label" aria-hidden="true">Tu salud, nuestra prioridad</p>
+    <h2 id="cta-final-title" class="reveal">¿Hablamos? Estamos <em>muy cerca</em></h2>
+    <p class="reveal">Llámanos, escríbenos por WhatsApp o ven a vernos a la Plaza de los Fueros. Te atenderemos con cercanía y profesionalidad.</p>
+    <div class="cta-final-actions reveal">
+      <a href="tel:+34948630631" translate="no" class="btn btn-primary" data-hover>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        948 63 06 31
+      </a>
+      <a href="https://wa.me/34948630631" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" data-hover>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="./contacto.html" class="btn btn-outline" data-hover>Formulario de contacto</a>
+    </div>
+  </section>
+
   <!-- ── Map ───────────────────────────────────────── -->
   <div class="map-section" aria-label="Mapa de ubicación de la farmacia">
     <iframe
@@ -686,9 +779,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+<!-- Mobile action bar -->
+<nav class="mobile-cta-bar" aria-label="Acciones rápidas">
+  <a href="tel:+34948630631" class="mobile-cta-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+    Llamar
+  </a>
+  <a href="https://wa.me/34948630631" target="_blank" rel="noopener noreferrer" class="mobile-cta-item mobile-cta-item--wa">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://maps.google.com/?q=Plaza+de+los+Fueros+4+Bera+Navarra" target="_blank" rel="noopener noreferrer" class="mobile-cta-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+    Cómo llegar
+  </a>
+</nav>
+
 <!-- ── Scripts ─────────────────────────────────────── -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" defer></script>
 <script src="../assets/js/animations.js" defer></script>
 </body>
 </html>
