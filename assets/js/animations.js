@@ -12,46 +12,6 @@ document.documentElement.classList.add('js-ready');
 /* ── Reduced Motion ───────────────────────────────────── */
 const mm = gsap.matchMedia();
 
-/* ── Custom Cursor ────────────────────────────────────── */
-function initCursor() {
-  // Skip on touch devices and when user prefers reduced motion
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const cursor = document.querySelector('.cursor');
-  const ring   = document.querySelector('.cursor-ring');
-  if (!cursor || !ring) return;
-
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  window.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.08, ease: 'none', overwrite: 'auto' });
-  });
-
-  gsap.ticker.add(() => {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    gsap.set(ring, { x: ringX, y: ringY });
-  });
-
-  // Event delegation — single listener instead of N listeners
-  const isHoverable = el => el && (el.matches?.('a, button, [data-hover]') || el.closest?.('a, button, [data-hover]'));
-  document.addEventListener('mouseover', e => {
-    if (isHoverable(e.target)) {
-      cursor.classList.add('hover');
-      ring.classList.add('hover');
-    }
-  });
-  document.addEventListener('mouseout', e => {
-    if (isHoverable(e.target) && !isHoverable(e.relatedTarget)) {
-      cursor.classList.remove('hover');
-      ring.classList.remove('hover');
-    }
-  });
-}
 
 /* ── Page Loader ──────────────────────────────────────── */
 function dismissLoader() {
@@ -647,6 +607,18 @@ function initPageTransitions() {
 
 /* ── Video Parallax (services pages) ─────────────────── */
 function initVideoParallax() {
+  const decorativeVideos = document.querySelectorAll('.page-hero-video-wrap video, .services-bio-banner .vbg video, .services-cta-video .vbg video');
+  if (decorativeVideos.length) {
+    decorativeVideos.forEach(v => {
+      v.pause();
+      v.removeAttribute('src');
+      v.querySelectorAll('source').forEach(s => s.remove());
+      v.load();
+      v.remove();
+    });
+    return;
+  }
+
   // On mobile/save-data/slow-conn, remove decorative videos to save bandwidth
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
   const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
@@ -915,7 +887,7 @@ function initStatusBadge() {
 document.addEventListener('DOMContentLoaded', () => {
   initFooter();
   initLoader();
-  initCursor();
+
   initNav();
   initHeroAnims();
   initMouseParallax();
