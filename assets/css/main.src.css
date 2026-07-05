@@ -20,8 +20,11 @@
   --dark:          #0F1A14;
   --text:          #2C2C2C;
   --text-mid:      #5A5A5A;
-  --text-light:    #9A9A9A;
+  --text-light:    #6E6E6E;
   --white:         #FFFFFF;
+  --danger:        #B3261E;
+  --danger-bg:     rgba(179,38,30,.05);
+  --whatsapp:      #25D366;
 
   --font-display:  'Cormorant Garamond', Georgia, serif;
   --font-body:     'DM Sans', system-ui, sans-serif;
@@ -1961,7 +1964,7 @@ html.js-ready .reveal-scale {
   z-index: 900;
   width: 52px;
   height: 52px;
-  background: #25D366;
+  background: var(--whatsapp);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2012,8 +2015,8 @@ html.js-ready .reveal-scale {
 .form-group input:invalid:not(:placeholder-shown),
 .form-group textarea:invalid:not(:placeholder-shown),
 .form-group select:invalid:not(:placeholder-shown) {
-  border-color: #e05757;
-  background: rgba(224,87,87,.04);
+  border-color: var(--danger);
+  background: var(--danger-bg);
 }
 .form-group input:valid:not(:placeholder-shown),
 .form-group textarea:valid:not(:placeholder-shown) {
@@ -2022,7 +2025,7 @@ html.js-ready .reveal-scale {
 .form-error {
   display: block;
   font-size: 0.78rem;
-  color: #e05757;
+  color: var(--danger);
   margin-top: 0.3rem;
   min-height: 1em;
   opacity: 0;
@@ -2036,7 +2039,7 @@ html.js-ready .reveal-scale {
 .form-group.has-error input,
 .form-group.has-error textarea,
 .form-group.has-error select {
-  border-color: #e05757;
+  border-color: var(--danger);
   animation: shake 0.3s ease;
 }
 @keyframes shake {
@@ -2132,7 +2135,7 @@ a.quick-card:hover{transform:translateY(-4px);border-color:rgba(184,134,11,.35);
 .cta-final h2 em{color:var(--gold-light);font-style:italic}
 .cta-final p{color:rgba(250,247,240,.7);max-width:520px;margin:0 auto 2.5rem}
 .cta-final-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-whatsapp{background:#25D366;color:#fff}
+.btn-whatsapp{background:var(--whatsapp);color:#fff}
 .btn-whatsapp:hover{background:#1FBF5B;transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,211,102,.4)}
 
 /* â”€â”€ Brands strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -2201,10 +2204,10 @@ a.quick-card:hover{transform:translateY(-4px);border-color:rgba(184,134,11,.35);
 .btn-primary:hover{box-shadow:0 0 0 3px rgba(250,247,240,.35),0 6px 32px rgba(0,0,0,.28)}
 
 /* ── Micro-animations on service-card SVG icons ─────────── */
-.service-card .service-icon svg{transition:transform .4s cubic-bezier(0.34,1.56,0.64,1),color .3s}
+.service-card .service-icon svg{transition:transform .4s cubic-bezier(.22,1,.36,1),color .3s}
 .service-card:hover .service-icon svg{transform:scale(1.18) rotate(-6deg)}
 .service-card--featured:hover .service-icon svg{transform:scale(1.22) rotate(6deg)}
-.service-link svg{transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)}
+.service-link svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
 .service-card:hover .service-link svg{transform:translateX(5px)}
 
 /* ── Quick-bar cards — solid white ─────────────────────── */
@@ -2240,7 +2243,7 @@ a.quick-card:hover{transform:translateY(-4px);border-color:rgba(184,134,11,.35);
 .review-source svg{flex-shrink:0}
 
 /* ── Nav SVG micro-animation ────────────────────────────── */
-.nav-cta svg,.mobile-cta-item svg,.quick-card-icon svg{transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)}
+.nav-cta svg,.mobile-cta-item svg,.quick-card-icon svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
 .nav-cta:hover svg{transform:rotate(-15deg) scale(1.1)}
 .mobile-cta-item:active svg{transform:scale(.88)}
 
@@ -2390,7 +2393,7 @@ a.quick-card:hover{transform:translateY(-4px);border-color:rgba(184,134,11,.35);
 }
 
 /* ── Footer social icon micro-animation ─────────────────── */
-.footer-social a svg{transition:transform .35s cubic-bezier(0.34,1.56,0.64,1),color .25s}
+.footer-social a svg{transition:transform .35s cubic-bezier(.22,1,.36,1),color .25s}
 .footer-social a:hover svg{transform:scale(1.25) rotate(-8deg)}
 
 /* ── Scroll-driven fade-in (CSS only, progressive enhancement) */

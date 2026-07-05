@@ -2,6 +2,14 @@
 # Prevents duplicate content: Netlify serves both /page and /page.html
 # Google was picking /page as canonical instead of /page.html, causing indexing errors
 
+# Language home index.html files (were serving 200 instead of redirecting,
+# creating duplicate-content pairs with / and /xx/ — GSC "Duplicada" issue)
+/index.html             /                   301!
+/es/index.html          /es/                301!
+/eu/index.html          /eu/                301!
+/en/index.html          /en/                301!
+/fr/index.html          /fr/                301!
+
 /es/servicios.html      /es/servicios       301!
 /es/nosotros.html       /es/nosotros        301!
 /es/contacto.html       /es/contacto        301!

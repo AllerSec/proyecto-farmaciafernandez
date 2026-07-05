@@ -88,8 +88,7 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" as="image" href="../assets/images/exterior-1024.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700&display=swap"></noscript>
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF7F0">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1B4332">
+  <meta name="theme-color" content="#FAF7F0">
   <script>document.documentElement.classList.add('js-ready');</script>
   <link rel="stylesheet" href="../assets/css/main.css">
 
@@ -202,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Cookie Banner -->
 <div id="cookie-banner" role="region" aria-label="Consentement aux cookies" aria-live="polite">
-  <p class="cookie-banner-text">Nous utilisons des cookies d'analyse (Google Analytics) pour améliorer votre expérience. Vous pouvez les accepter ou les refuser. <a href="./cookies.html">Politique de cookies</a>.</p>
+  <p class="cookie-banner-text">Nous utilisons des cookies d'analyse (Google Analytics) pour améliorer votre expérience. Vous pouvez les accepter ou les refuser. <a href="./cookies">Politique de cookies</a>.</p>
   <div class="cookie-banner-actions">
     <button class="cookie-btn-accept" id="cookie-accept">Accepter</button>
     <button class="cookie-btn-reject" id="cookie-reject">Refuser</button>
@@ -211,7 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a class="skip-link" href="#main">Aller au contenu principal</a>
 
-<div id="page-transition" style="position:fixed;inset:0;background:var(--green-deep);z-index:9996;pointer-events:none;opacity:0;"></div>
+<div id="page-transition" style="position:fixed;inset:0;background:var(--green-deep);z-index:900;pointer-events:none;opacity:0;"></div>
 
 
 <header>
@@ -226,9 +225,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <ul class="nav-links" role="list">
       <li><a href="./" class="nav-link active" aria-current="page">Accueil</a></li>
-      <li><a href="./services.html" class="nav-link">Services</a></li>
-      <li><a href="./pharmacie.html" class="nav-link">Notre pharmacie</a></li>
-      <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      <li><a href="./services" class="nav-link">Services</a></li>
+      <li><a href="./pharmacie" class="nav-link">Notre pharmacie</a></li>
+      <li><a href="./contact" class="nav-link">Contact</a></li>
     </ul>
 
     <div class="nav-right">
@@ -253,9 +252,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav id="nav-mobile" class="nav-mobile" role="navigation" aria-label="Menu mobile" aria-hidden="true">
     <a href="./" class="nav-mobile-link">Accueil</a>
-    <a href="./services.html" class="nav-mobile-link">Services</a>
-    <a href="./pharmacie.html" class="nav-mobile-link">Notre pharmacie</a>
-    <a href="./contact.html" class="nav-mobile-link">Contact</a>
+    <a href="./services" class="nav-mobile-link">Services</a>
+    <a href="./pharmacie" class="nav-mobile-link">Notre pharmacie</a>
+    <a href="./contact" class="nav-mobile-link">Contact</a>
     <div class="nav-mobile-langs">
       <a href="../es/" class="nav-mobile-lang" lang="es">ES</a>
       <a href="../eu/" class="nav-mobile-lang" lang="eu">EU</a>
@@ -291,7 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
 
       <div class="hero-actions">
-        <a href="./services.html" class="btn btn-primary" data-hover>
+        <a href="./services" class="btn btn-primary" data-hover>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
           Nos services
         </a>
@@ -356,6 +355,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="services-grid">
 
       <article class="service-card service-card--featured reveal">
+        <video
+          src="../assets/videos/consejo-farmaceutico.mp4"
+          autoplay muted loop playsinline
+          aria-hidden="true"
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+        ></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,15,12,.75) 0%,rgba(10,15,12,.15) 55%,rgba(10,15,12,.4) 100%);z-index:0;"></div>
+        <div style="position:relative;z-index:1;">
         <div class="service-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
         </div>
@@ -364,6 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="./services.html#svc-2" class="service-link" data-hover>En savoir plus
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
+        </div>
       </article>
 
       <article class="service-card reveal">
@@ -421,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </article>
 
-      <a href="./services.html" class="service-card service-card--cta reveal" data-hover>
+      <a href="./services" class="service-card service-card--cta reveal" data-hover>
         <span>Voir tous<br>les services</span>
         <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
@@ -429,13 +437,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span class="marquee-item">Conseil pharmaceutique <i>✦</i> Dispensation <i>✦</i> Dermocosmétique <i>✦</i> Orthopédie <i>✦</i> Tension artérielle <i>✦</i> Phytothérapie <i>✦</i> Préparations magistrales <i>✦</i> Parapharmacie <i>✦</i></span>
-      <span class="marquee-item">Conseil pharmaceutique <i>✦</i> Dispensation <i>✦</i> Dermocosmétique <i>✦</i> Orthopédie <i>✦</i> Tension artérielle <i>✦</i> Phytothérapie <i>✦</i> Préparations magistrales <i>✦</i> Parapharmacie <i>✦</i></span>
-    </div>
-  </div>
 
   <!-- About Strip -->
   <section class="section about-section" aria-labelledby="about-title">
@@ -462,7 +463,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="about-content">
-        <p class="section-label reveal">Qui nous sommes</p>
         <h2 id="about-title" class="reveal">Une pharmacie <em>au service de la communauté</em></h2>
         <div class="gold-divider reveal"></div>
         <p class="reveal">La Pharmacie Fernández Díez est depuis longtemps le point de référence santé de Bera et ses environs. Sous la direction d'Arantza Fernández Díez, nous offrons des soins pharmaceutiques de proximité, professionnels et personnalisés.</p>
@@ -473,7 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Contrôle gratuit de la tension artérielle</li>
           <li><span class="why-check" aria-hidden="true"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Commandes et réservations par téléphone ou WhatsApp</li>
         </ul>
-        <a href="./pharmacie.html" class="btn btn-ghost reveal" data-hover>Nous découvrir</a>
+        <a href="./pharmacie" class="btn btn-ghost reveal" data-hover>Nous découvrir</a>
       </div>
     </div>
   </section>
@@ -504,7 +504,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Gallery -->
   <section class="section gallery-section" aria-labelledby="gallery-title">
     <div class="section-header">
-      <p class="section-label">Notre espace</p>
       <h2 id="gallery-title" class="reveal">Un espace conçu<br><em>pour vous</em></h2>
       <p class="reveal">Venez nous rendre visite au Plaza de los Fueros, 4 et découvrez l'étendue et la variété de notre pharmacie.</p>
     </div>
@@ -553,7 +552,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Hours & Contact -->
   <section class="section info-section" id="hours" aria-labelledby="hours-title">
     <div class="section-header">
-      <p class="section-label">Nous sommes là</p>
       <h2 id="hours-title" class="reveal">Horaires &amp; <em>contact</em></h2>
       <div class="gold-divider reveal"></div>
     </div>
@@ -640,7 +638,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </a>
-      <a href="./contact.html" class="btn btn-outline" data-hover>Formulaire de contact</a>
+      <a href="./contact" class="btn btn-outline" data-hover>Formulaire de contact</a>
     </div>
   </section>
 
@@ -693,9 +691,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3>Navigation</h3>
       <ul class="footer-links" role="list">
         <li><a href="./" class="footer-link">Accueil</a></li>
-        <li><a href="./services.html" class="footer-link">Services</a></li>
-        <li><a href="./pharmacie.html" class="footer-link">Notre pharmacie</a></li>
-        <li><a href="./contact.html" class="footer-link">Contact</a></li>
+        <li><a href="./services" class="footer-link">Services</a></li>
+        <li><a href="./pharmacie" class="footer-link">Notre pharmacie</a></li>
+        <li><a href="./contact" class="footer-link">Contact</a></li>
       </ul>
     </div>
 
@@ -715,7 +713,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">&copy; <span id="footer-year"></span> Pharmacie Fernández Díez. Conçu par <a href="https://unaxaller.com" target="_blank" rel="noopener noreferrer">Unax Aller</a>.</p>
-    <nav class="footer-legal" aria-label="Légal"><a href="./mentions-legales.html">Mentions légales</a><a href="./confidentialite.html">Confidentialité</a><a href="./cookies.html">Cookies</a></nav>
+    <nav class="footer-legal" aria-label="Légal"><a href="./mentions-legales">Mentions légales</a><a href="./confidentialite">Confidentialité</a><a href="./cookies">Cookies</a></nav>
   </div>
 </footer>
 
